@@ -32,6 +32,7 @@ jobs:
       - name: Publish built files into Pages subdirectory
         working-directory: .
         run: |
+          mv royal-emerald-invitation/dist/index.template.html royal-emerald-invitation/dist/index.html
           rm -rf royal-emerald-invitation/assets
           cp -R royal-emerald-invitation/dist/. royal-emerald-invitation/
           rm -rf royal-emerald-invitation/dist

@@ -57,3 +57,23 @@
 input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeholder{color:#aa9a84}form label{color:#846947}form small{color:#9b8b76}
 .success{color:#7c6244}.success>svg{color:#b58b50}.reset{color:#9a7548}footer{color:#a17a47}footer p{color:#735638}
 @media(prefers-reduced-motion:reduce){.palace-column{animation:none!important}}
+
+
+/* Heirloom envelope: embossed ivory stock, botanical relief and antique-gold seal */
+.envelope-stage{position:fixed;z-index:4;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 18px 42px;background:radial-gradient(ellipse at 50% 42%,#fffdf8eF 0%,#f6ecdfed 58%,#e8d5bcf2 100%);text-align:center;color:#806342}
+.envelope-caption{margin-bottom:24px}.envelope-caption small{font-size:.58rem;letter-spacing:.24em;color:#a6814f}.envelope-caption p{font:italic 1.5rem "Cormorant Garamond";margin:8px 0;color:#806342}
+.heirloom-envelope{position:relative;width:min(78vw,390px);aspect-ratio:.69;filter:drop-shadow(0 22px 28px #876b4633);perspective:1000px}
+.envelope-paper{position:absolute;inset:0;overflow:hidden;border:1px solid #d9c39f;border-radius:5px;background:linear-gradient(135deg,#fffdf7,#f7eddf 48%,#fffaf1);box-shadow:inset 0 0 0 7px #fff9,inset 0 0 0 8px #d6bd96,inset 0 0 34px #c9ad8055}
+.envelope-paper:before{content:"";position:absolute;inset:17px;border:1px solid #d6bd96;opacity:.7}
+.envelope-paper:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 17px,#b9996a0a 18px,#b9996a0a 19px);pointer-events:none}
+.emboss-floral{position:absolute;z-index:1;color:#c5a77b99;font:2.1rem "Cormorant Garamond";letter-spacing:.18em;text-shadow:1px 1px #fff,-1px -1px #b99a6b55;white-space:nowrap}
+.floral-one{top:18%;left:50%;transform:translateX(-50%) rotate(45deg);font-size:2.6rem}.floral-two{bottom:18%;left:50%;transform:translateX(-50%) rotate(225deg);font-size:2.6rem}
+.envelope-diamond{position:absolute;inset:13% 9%;border:1px solid #d2b68a;transform:rotate(45deg) scale(.72);opacity:.45}
+.envelope-seal{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#fff3d2;background:radial-gradient(circle at 35% 28%,#f4dfb1,#bd9250 55%,#805b2d);border:4px double #f2dfb5;box-shadow:0 4px 12px #78572e66,0 0 0 5px #c4a16b44;cursor:pointer;animation:sealPulse 3s ease-in-out infinite}
+.envelope-seal span{font-size:1.8rem;line-height:1}.envelope-seal small{font-size:.48rem;letter-spacing:.22em}
+.envelope-flap{position:absolute;inset:0 0 auto;height:52%;z-index:2;transform-origin:50% 0;background:linear-gradient(145deg,#fffaf0,#ead9bf);clip-path:polygon(0 0,100% 0,50% 100%);border-top:1px solid #d6bd96;filter:drop-shadow(0 3px 3px #8c704033);pointer-events:none}
+.envelope-hint{font:italic 1.1rem "Cormorant Garamond";color:#9a7b55;margin:22px 0 12px}
+.envelope-open{font-size:.62rem}.envelope-open span{font-size:1rem}
+@keyframes sealPulse{0%,100%{box-shadow:0 4px 12px #78572e66,0 0 0 5px #c4a16b33}50%{box-shadow:0 4px 18px #78572e77,0 0 0 10px #c4a16b22}}
+@media(max-height:700px){.heirloom-envelope{height:48vh;width:auto}.envelope-caption{margin-bottom:12px}.envelope-hint{margin:12px 0 8px}}
+@media(prefers-reduced-motion:reduce){.envelope-seal{animation:none}}

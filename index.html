@@ -123,6 +123,136 @@
 .creator{background:#eee8dc;padding:76px 0}.creator-shell{max-width:960px;margin:auto;background:#fffdf8;border:1px solid #ddd1bf;box-shadow:0 22px 60px #3d2b1712}.creator-head{text-align:center;padding:38px 22px 24px}.creator-head h2{font:500 clamp(30px,4vw,43px) 'Playfair Display',serif;margin:10px 0}.creator-head p{font-size:12px;color:#766d62;line-height:1.8}.wizard-steps{display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid #e8dfd2}.wizard-step{padding:16px 5px;text-align:center;font-size:10px;color:#968b7e;border-bottom:2px solid transparent}.wizard-step b{display:block;font:italic 19px 'Playfair Display';margin-bottom:4px}.wizard-step.active{color:#245b4c;border-color:#245b4c}.wizard-panel{padding:30px;min-height:350px}.wizard-panel h3{font:26px 'Playfair Display';margin:0 0 7px}.wizard-panel>p{font-size:12px;color:#786f64;margin:0 0 22px}.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.choice{border:1px solid #e2d9cc;background:#fffdf8;padding:17px 12px;text-align:left;cursor:pointer;min-height:82px;color:#39332d}.choice strong{display:block;font:17px 'Playfair Display';margin-bottom:5px}.choice small{font-size:10px;color:#82786d}.choice.selected{border:1px solid #2e6654;background:#f0f5ef;box-shadow:inset 0 0 0 1px #2e6654}.theme-choice{padding:0;overflow:hidden}.theme-swatch{height:75px;display:block;background:linear-gradient(135deg,#d8c7a7,#f8f1e4 55%,#597667)}.theme-choice:nth-child(2n) .theme-swatch{background:linear-gradient(135deg,#e7d8d2,#fff8ef 55%,#b47c83)}.theme-choice:nth-child(3n) .theme-swatch{background:linear-gradient(135deg,#1e453b,#c7a56c 55%,#f1e4ca)}.theme-choice:nth-child(4n) .theme-swatch{background:linear-gradient(135deg,#d4d9d2,#f8f7ef 55%,#9ba98b)}.theme-choice strong,.theme-choice small{display:block;padding:0 11px}.theme-choice strong{padding-top:10px}.theme-choice small{padding-bottom:12px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#776c60}.field input,.field textarea,.field select{width:100%;padding:13px;border:1px solid #ded4c7;background:#fffefa;font:13px 'DM Sans';color:#302b26}.field.full{grid-column:1/-1}.check-row{display:flex;flex-wrap:wrap;gap:10px}.check-pill{display:flex;align-items:center;gap:8px;border:1px solid #e2d9cc;padding:12px 14px;font-size:11px;cursor:pointer}.wizard-actions{display:flex;justify-content:space-between;gap:12px;padding:18px 30px;border-top:1px solid #e8dfd2}.wizard-actions button{border:1px solid #245b4c;background:#245b4c;color:white;padding:13px 21px;font:10px 'DM Sans';letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.wizard-actions button.secondary{background:transparent;color:#245b4c}.wizard-actions button:disabled{opacity:.3;cursor:not-allowed}.builder-preview{background:#f4eee2;border:1px solid #d8c8ad;padding:28px;text-align:center;max-width:420px;margin:10px auto;color:#4a382e}.builder-preview .preview-mark{font-size:10px;letter-spacing:.22em;color:#96764d}.builder-preview h4{font:italic 34px 'Playfair Display';margin:20px 0 10px;color:#285747}.builder-preview p{font-size:11px;line-height:1.8}.builder-note{font-size:10px;color:#8b7f71;text-align:center;margin-top:14px}.creator-status{font-size:11px;color:#245b4c;min-height:18px}
 @media(max-width:620px){.creator{padding:48px 0}.wizard-panel{padding:22px 16px}.wizard-actions{padding:15px 16px}.choice-grid{grid-template-columns:repeat(2,1fr)}.wizard-step{font-size:8px}.wizard-step b{font-size:16px}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
 
+
+/* Theme library — editorial, mobile-first template browser */
+:root{--paper:#f7f4ee;--ink:#26221f;--muted:#81776d;--wine:#633342;--gold:#b69a70;--line:#e9e1d6}
+.theme-library{padding:76px 0 88px;background:#f8f6f1}
+.library-heading{text-align:center;max-width:620px;margin:0 auto 30px}
+.library-heading h2{font:500 clamp(40px,6vw,62px)/1.05 'Playfair Display',serif;letter-spacing:-.035em;margin:14px 0}
+.library-heading p{font-size:14px;line-height:1.8;color:var(--muted)}
+.theme-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:32px auto 34px}
+.theme-tab{border:1px solid #ded5c9;background:transparent;color:#655b52;padding:11px 17px;border-radius:2px;font:11px 'DM Sans',sans-serif;letter-spacing:.035em;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.theme-tab:hover,.theme-tab.active{background:#34292a;color:#fffaf2;border-color:#34292a}
+.theme-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.theme-card{min-width:0;background:#fffdfa;border:1px solid #ebe4da;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s;animation:themeIn .5s both}
+.theme-card[hidden]{display:none}
+.theme-card:hover{transform:translateY(-5px);box-shadow:0 18px 45px #3d2a1712}
+.theme-art{height:320px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 17px;isolation:isolate}
+.theme-art:before,.theme-art:after{content:"";position:absolute;pointer-events:none;z-index:-1}
+.theme-art .art-kicker{font:8px 'DM Sans';letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px}
+.theme-art strong{font:italic 35px/1.08 'Playfair Display',serif;font-weight:400}
+.theme-art strong i{font-weight:400}
+.theme-art .art-date{font:8px 'DM Sans';letter-spacing:.2em;margin-top:24px}
+.theme-art .art-flower,.theme-art .art-ornament,.theme-art .art-pearl,.theme-art .art-star,.theme-art .art-ring{position:absolute;font-size:70px;opacity:.55}
+.art-garden{background:radial-gradient(ellipse at 15% 20%,#d9e0ce,transparent 35%),radial-gradient(ellipse at 85% 80%,#e8d6d0,transparent 34%),#f5f0e6;color:#455b4c}
+.art-garden:before{inset:12px;border:1px solid #a8b49b;border-radius:48% 48% 2px 2px}
+.art-garden .art-flower{right:16px;bottom:18px;color:#b87580}
+.art-royal{background:linear-gradient(145deg,#183c35,#092a27);color:#ead5a4}
+.art-royal:before{inset:13px;border:1px solid #c5a66d;outline:1px solid #c5a66d;outline-offset:4px}
+.art-royal:after{inset:30px 25px;border:1px solid #c5a66d;border-radius:100px 100px 0 0}
+.art-royal .art-ornament{bottom:20px;color:#d2b77d}
+.art-pearl{background:radial-gradient(circle at 50% 45%,#fff,#eee5d9 70%);color:#78675b}
+.art-pearl:before{inset:16px;border:1px solid #d1bfa8;box-shadow:inset 0 0 0 7px #f8f4ec,inset 0 0 0 8px #d1bfa8}
+.art-pearl strong{font-size:66px;letter-spacing:.1em}
+.art-pearl .art-pearl{right:24px;bottom:18px;color:#c9b69d}
+.art-modern{background:#eeeae2;color:#262523;align-items:flex-start;text-align:left}
+.art-modern:before{inset:18px;border:1px solid #38322d}
+.art-modern strong{font:700 48px/.86 'DM Sans';letter-spacing:-.08em}
+.art-modern .art-date{align-self:flex-end}
+.art-bloom{background:linear-gradient(135deg,#f6e7e2,#e5e8d8);color:#875765}
+.art-bloom:before{width:220px;height:220px;border:1px solid #c68d99;border-radius:50%;box-shadow:0 0 0 18px #ffffff33,0 0 0 38px #ffffff20}
+.art-bloom .art-flower{right:18px;top:20px;color:#b77a8a}
+.art-postcard{background:#e8d8bd;color:#5a493c;transform:none}
+.art-postcard:before{inset:18px;border:1px dashed #9e8164}
+.art-postcard strong{font-size:43px;transform:rotate(-5deg)}
+.art-sunset{background:linear-gradient(180deg,#f1c69f,#c77d68 52%,#634a52);color:#fff1db}
+.art-sunset:before{width:220px;height:220px;border-radius:50%;background:#f6d5aa;top:32px;opacity:.6}
+.art-sunset strong{font:300 42px 'Playfair Display';z-index:1}
+.art-disco{background:radial-gradient(circle at 50% 40%,#9d5b8a,#482c56 72%);color:#fff1fb}
+.art-disco:before{inset:15px;border:1px solid #e9c2e7}
+.art-disco:after{width:130px;height:130px;border-radius:50%;right:-30px;top:-35px;background:repeating-conic-gradient(#f9d9fa 0 8deg,#a97ac0 8deg 16deg);opacity:.3}
+.art-disco strong{font:700 39px/.95 'DM Sans';text-transform:uppercase}
+.art-disco .art-star{bottom:15px;color:#f8d4f0}
+.art-girls{background:radial-gradient(ellipse at 15% 15%,#f4c9bb,transparent 45%),#fae9dc;color:#985d61}
+.art-girls:before{inset:14px;border:1px solid #d69a91;border-radius:48%}
+.art-girls .art-flower{bottom:12px;right:18px;color:#c07e8b}
+.art-champagne{background:linear-gradient(145deg,#1c1b1a,#43372d);color:#e8c98e}
+.art-champagne:before{inset:13px;border:1px solid #c5a66d}
+.art-champagne strong{font-size:42px}
+.art-lap{background:linear-gradient(150deg,#243d36,#10231f);color:#e8dfc5}
+.art-lap:before{inset:18px;border:1px solid #c3b18b;transform:skewY(-7deg)}
+.art-lap strong{font:800 55px/.9 'DM Sans';text-transform:uppercase;letter-spacing:-.08em}
+.art-midnight{background:radial-gradient(ellipse at 50% 0,#48506c,#111c32 65%);color:#e6c49b}
+.art-midnight:before{inset:14px;border:1px solid #b98e68}
+.art-midnight .art-star{top:22px;right:22px}
+.art-yes{background:linear-gradient(145deg,#f2d9d6,#fff6ed);color:#8c5960}
+.art-yes:before{inset:14px;border:1px solid #c99b9b;border-radius:48% 48% 0 0}
+.art-yes strong{font-size:44px}
+.art-yes .art-ring{bottom:10px;color:#c49b70}
+.art-olive{background:#e8e7d9;color:#58634e}
+.art-olive:before{inset:17px;border:1px solid #a6ad91}
+.art-olive strong{font-size:33px}
+.art-petal{background:radial-gradient(ellipse at 80% 15%,#e9c5d7,transparent 40%),#f4e9ed;color:#8b596f}
+.art-petal:before{inset:13px;border:1px solid #cba5ba;border-radius:48%}
+.art-petal .art-flower{left:14px;bottom:10px;color:#bb8aa5}
+.art-brunch{background:linear-gradient(145deg,#f3e8b8,#f7eee0);color:#806b40}
+.art-brunch:before{inset:15px;border:1px solid #c5b17c}
+.art-brunch strong{font-size:34px}
+.theme-card-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:15px 14px 16px}
+.theme-card-info h3{font:500 19px 'Playfair Display',serif;margin:0 0 4px;color:#342d29}
+.theme-card-info p{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#8b8177;margin:0}
+.play-theme{border:0;background:transparent;color:#6b3443;display:flex;align-items:center;gap:7px;white-space:nowrap;font:10px 'DM Sans';cursor:pointer;padding:8px 0 8px 8px}
+.play-theme:first-letter{font-size:12px}
+.play-theme span{border-bottom:1px solid #c7aa88;padding-bottom:3px}
+.play-theme:hover{color:#a26b58}
+.library-footnote{text-align:center;color:#9a9085;font-size:10px;margin:26px 0 0}
+.theme-preview{position:fixed;inset:0;z-index:40;background:#171315ed;backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px}
+.theme-preview.open{display:flex;animation:fadePreview .3s both}
+.theme-preview-panel{width:min(410px,100%);display:flex;flex-direction:column;align-items:center;gap:15px;position:relative}
+.theme-preview-close{position:absolute;right:-5px;top:-13px;width:38px;height:38px;border:1px solid #d5c09b;border-radius:50%;background:#f8f1e7;color:#332629;font-size:24px;z-index:4;cursor:pointer}
+.preview-phone{width:min(340px,84vw);height:min(660px,78dvh);min-height:470px;background:#171719;border:6px solid #29282a;border-radius:34px;padding:6px;box-shadow:0 30px 90px #0009,0 0 0 1px #b99b6b;position:relative}
+.preview-speaker{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:54px;height:5px;background:#282729;border-radius:9px;z-index:2}
+.preview-screen{height:100%;overflow:auto;border-radius:23px;background:#f5eee3;scrollbar-width:none}
+.preview-art{height:100%;min-height:510px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:38px 25px;overflow:hidden;background:#f5f0e6;color:#574a40}
+.preview-art h2{font:italic 43px/1.05 'Playfair Display',serif;font-weight:400;margin:30px 0 20px;opacity:0;transform:translateY(18px);transition:opacity .9s .4s,transform .9s .4s}
+.preview-art h2 i{color:#b18b57;font-weight:400}
+.preview-art p,.preview-art strong,.preview-art small,.preview-kicker,.preview-bottom{font:8px 'DM Sans';letter-spacing:.22em}
+.preview-art p{margin:15px 0}
+.preview-art strong{font-size:10px;margin-top:17px}
+.preview-art small{margin-top:10px}
+.preview-kicker{position:absolute;top:52px}
+.preview-flourish{font:25px 'Playfair Display';color:#b18b57;opacity:0;transform:scale(.3) rotate(-45deg);transition:all .8s .2s}
+.preview-line{width:50px;height:1px;background:#b18b57;transform:scaleX(0);transition:transform .7s .65s}
+.preview-bottom{position:absolute;bottom:38px}
+.preview-art.playing h2{opacity:1;transform:none}
+.preview-art.playing .preview-flourish{opacity:1;transform:scale(1) rotate(0)}
+.preview-art.playing .preview-line{transform:scaleX(1)}
+.preview-art.art-royal{background:radial-gradient(ellipse,#245247,#092a27);color:#ead5a4}
+.preview-art.art-pearl{background:radial-gradient(circle,#fff,#e9dfd2);color:#77665a}
+.preview-art.art-modern{background:#eeeae2;color:#262523}
+.preview-art.art-bloom{background:linear-gradient(145deg,#f6e7e2,#e5e8d8);color:#875765}
+.preview-art.art-postcard{background:#e8d8bd;color:#5a493c}
+.preview-art.art-sunset{background:linear-gradient(180deg,#f1c69f,#c77d68 52%,#634a52);color:#fff1db}
+.preview-art.art-disco{background:radial-gradient(circle,#9d5b8a,#482c56);color:#fff1fb}
+.preview-art.art-girls{background:#fae9dc;color:#985d61}
+.preview-art.art-champagne{background:linear-gradient(145deg,#1c1b1a,#43372d);color:#e8c98e}
+.preview-art.art-lap{background:linear-gradient(150deg,#243d36,#10231f);color:#e8dfc5}
+.preview-art.art-midnight{background:radial-gradient(ellipse at 50% 0,#48506c,#111c32 65%);color:#e6c49b}
+.preview-art.art-yes{background:linear-gradient(145deg,#f2d9d6,#fff6ed);color:#8c5960}
+.preview-art.art-olive{background:#e8e7d9;color:#58634e}
+.preview-art.art-petal{background:#f4e9ed;color:#8b596f}
+.preview-art.art-brunch{background:linear-gradient(145deg,#f3e8b8,#f7eee0);color:#806b40}
+.preview-scroll-cue{text-align:center;color:#d9c9ad;font-size:8px;letter-spacing:.2em}
+.preview-scroll-cue span{display:block;font-size:17px;margin-top:4px;animation:cue 1.3s infinite}
+.preview-controls{width:min(340px,84vw);display:flex;justify-content:space-between;align-items:center;color:#e9ddca;font:12px 'Playfair Display',serif}
+.preview-controls button{border:1px solid #927a5d;color:#f2e7d4;background:transparent;padding:9px 13px;font:10px 'DM Sans';cursor:pointer}
+body.preview-open{overflow:hidden}
+@keyframes themeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadePreview{from{opacity:0}to{opacity:1}}
+@keyframes cue{50%{transform:translateY(5px)}}
+@media(max-width:900px){.theme-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.theme-art{height:290px}}
+@media(max-width:640px){.theme-library{padding:58px 0 65px}.theme-tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:0 1px 10px;margin:25px -1px 24px;scrollbar-width:none}.theme-tabs::-webkit-scrollbar{display:none}.theme-tab{flex:0 0 auto;padding:10px 14px}.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.theme-art{height:245px;padding:18px 10px}.theme-art strong{font-size:28px}.art-modern strong,.art-disco strong,.art-lap strong{font-size:35px}.theme-card-info{padding:12px 10px;align-items:flex-start}.theme-card-info h3{font-size:16px}.theme-card-info p{font-size:8px;line-height:1.5}.play-theme{font-size:9px;gap:4px}.play-theme span{max-width:52px;white-space:normal;line-height:1.3}.preview-phone{height:min(610px,75dvh);min-height:450px}}
+@media(prefers-reduced-motion:reduce){.theme-card,.preview-art h2,.preview-flourish,.preview-line{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -130,104 +260,65 @@
 <main>
 <section class="wrap hero"><div><div class="eyebrow">Digital invitations, thoughtfully made</div><h1>Your story.<br><em>Beautifully</em> invited.</h1><p>Modern Indian wedding invitations with thoughtful details, graceful motion and a little magic. A lovely first glimpse of your celebration, shared with everyone you love.</p><div class="hero-actions"><a class="btn" href="#creator">Start creating</a><a class="text-link" href="#collection">Explore themes</a></div></div><div class="hero-art"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1100&q=75" alt="Wedding floral table setting"></div></section>
 
-<section class="creator" id="creator"><div class="wrap"><div class="creator-shell">
-<div class="creator-head"><div class="eyebrow">The Invite Wala Studio</div><h2>Begin with your celebration.</h2><p>Choose a celebration, find your look and shape a first preview. Made for Indian weddings, on your phone and beyond.</p></div>
-<div class="wizard-steps" id="wizardSteps">
-<div class="wizard-step active"><b>01</b>Event</div><div class="wizard-step"><b>02</b>Theme</div><div class="wizard-step"><b>03</b>Details</div><div class="wizard-step"><b>04</b>Language</div><div class="wizard-step"><b>05</b>Extras</div>
-</div>
-<div class="wizard-panel" id="wizardPanel">
-<h3>What are you celebrating?</h3><p>Start by choosing the occasion for your invitation.</p>
-<div class="choice-grid" data-group="event">
-<button class="choice selected" data-value="Wedding"><strong>Wedding</strong><small>The big celebration</small></button><button class="choice" data-value="Save the Date"><strong>Save the Date</strong><small>A first announcement</small></button><button class="choice" data-value="Engagement"><strong>Engagement</strong><small>Celebrate your yes</small></button><button class="choice" data-value="Haldi"><strong>Haldi</strong><small>Sunshine and marigolds</small></button><button class="choice" data-value="Mehendi"><strong>Mehendi</strong><small>Colourful festivities</small></button><button class="choice" data-value="Reception"><strong>Reception</strong><small>An evening to remember</small></button><button class="choice" data-value="Sangeet"><strong>Sangeet</strong><small>Music, dance and joy</small></button><button class="choice" data-value="Bachelorette"><strong>Bachelorette</strong><small>One more celebration</small></button><button class="choice" data-value="Baby Shower"><strong>Baby Shower</strong><small>A little new beginning</small></button>
-</div></div>
-<div class="wizard-actions"><button class="secondary" id="wizardBack" disabled>Back</button><span class="creator-status" id="creatorStatus" aria-live="polite"></span><button id="wizardNext">Continue</button></div>
-</div></div></section>
-
-<section class="section wrap" id="collection"><div class="section-head"><div class="eyebrow">The collection</div><h2>Find the feeling that feels like you.</h2><p>Explore our sample styles. Every invitation can be personalised with your names, dates, story and celebration details.</p></div><div class="filters"><button class="filter active" data-filter="all">All designs</button><button class="filter" data-filter="wedding">Wedding</button><button class="filter" data-filter="minimal">Minimal</button><button class="filter" data-filter="floral">Floral</button><button class="filter" data-filter="celebration">Celebration</button></div><div class="grid" id="designGrid">
-<article class="design" data-category="wedding" data-name="The Heirloom" data-desc="Classic Indian elegance with a contemporary finish." data-price="From ₹1,499" data-img="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=70" alt="Wedding decor sample"></div><div class="design-info"><div><h3>The Heirloom</h3><p>Classic · Wedding</p></div><span class="price">From ₹1,499</span></div></article>
-<article class="design" data-category="minimal" data-name="The Modern Muse" data-desc="Clean typography and quiet, confident details." data-price="From ₹999" data-img="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=70" alt="Minimal wedding stationery sample"></div><div class="design-info"><div><h3>The Modern Muse</h3><p>Minimal · Modern</p></div><span class="price">From ₹999</span></div></article>
-<article class="design" data-category="floral" data-name="The Garden Edit" data-desc="Soft florals and a romantic garden-inspired palette." data-price="From ₹1,299" data-img="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=70" alt="Botanical floral sample"></div><div class="design-info"><div><h3>The Garden Edit</h3><p>Floral · Romantic</p></div><span class="price">From ₹1,299</span></div></article>
-<article class="design" data-category="celebration" data-name="The Celebration Edit" data-desc="Colour, movement and joyful energy for every function." data-price="From ₹1,499" data-img="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=700&q=70" alt="Celebration decor sample"></div><div class="design-info"><div><h3>The Celebration Edit</h3><p>Festive · Colourful</p></div><span class="price">From ₹1,499</span></div></article>
-<article class="design" data-category="wedding" data-name="The Royal Affair" data-desc="Rich tones and regal detailing for a grand celebration." data-price="From ₹1,999" data-img="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=70" alt="Elegant wedding table sample"></div><div class="design-info"><div><h3>The Royal Affair</h3><p>Regal · Wedding</p></div><span class="price">From ₹1,999</span></div></article>
-<article class="design" data-category="minimal" data-name="The Intimate Note" data-desc="Understated, personal and made for meaningful moments." data-price="From ₹999" data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=75"><div class="design-image"><img loading="lazy" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=70" alt="Intimate wedding table sample"></div><div class="design-info"><div><h3>The Intimate Note</h3><p>Simple · Personal</p></div><span class="price">From ₹999</span></div></article>
-</div><p style="text-align:center;color:var(--muted);font-size:10px;margin-top:22px">Sample concepts and indicative starting prices. Final designs and quotes are confirmed after enquiry.</p></section>
+<section class="theme-library" id="collection">
+ <div class="wrap">
+  <div class="library-heading"><span class="eyebrow">The Invite Wala collection</span><h2>Pick your theme.</h2><p>Find a design that feels like your celebration. Press play to experience each invitation.</p></div>
+  <div class="theme-tabs" role="tablist" aria-label="Invitation categories">
+   <button class="theme-tab active" data-category="Wedding" role="tab" aria-selected="true">Wedding</button><button class="theme-tab" data-category="Save the Date" role="tab" aria-selected="false">Save the Date</button><button class="theme-tab" data-category="Bachelorette" role="tab" aria-selected="false">Bachelorette</button><button class="theme-tab" data-category="Bachelor Party" role="tab" aria-selected="false">Bachelor Party</button><button class="theme-tab" data-category="Engagement" role="tab" aria-selected="false">Engagement</button><button class="theme-tab" data-category="Bridal Shower" role="tab" aria-selected="false">Bridal Shower</button>
+  </div>
+  <div class="theme-grid" id="themeGrid">
+   <article class="theme-card" data-category="Wedding" data-theme="Ivory Garden" data-style="garden"><div class="theme-art art-garden"><span class="art-kicker">Together with our families</span><strong>Aarav <i>&</i> Aadhya</strong><span class="art-date">18 · 02 · 2027</span><span class="art-flower">✿</span></div><div class="theme-card-info"><div><h3>Ivory Garden</h3><p>Botanical · Soft ivory</p></div><button class="play-theme" aria-label="Play Ivory Garden preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Wedding" data-theme="The Grand Jaal" data-style="royal"><div class="theme-art art-royal"><span class="art-kicker">A royal invitation</span><strong>Aarav <i>&</i><br>Aadhya</strong><span class="art-date">Jaipur · 2027</span><span class="art-ornament">✧</span></div><div class="theme-card-info"><div><h3>The Grand Jaal</h3><p>Heritage · Emerald & gold</p></div><button class="play-theme" aria-label="Play The Grand Jaal preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Wedding" data-theme="Pearl Reverie" data-style="pearl"><div class="theme-art art-pearl"><span class="art-kicker">The wedding of</span><strong>A & A</strong><span class="art-date">A day to remember</span><span class="art-pearl">◌</span></div><div class="theme-card-info"><div><h3>Pearl Reverie</h3><p>Classic · Pearl & champagne</p></div><button class="play-theme" aria-label="Play Pearl Reverie preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Wedding" data-theme="Modern Vows" data-style="modern"><div class="theme-art art-modern"><span class="art-kicker">Save this moment</span><strong>LOVE<br>IN<br>TYPE.</strong><span class="art-date">AARAV + AADHYA</span></div><div class="theme-card-info"><div><h3>Modern Vows</h3><p>Editorial · Ink & ivory</p></div><button class="play-theme" aria-label="Play Modern Vows preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Save the Date" data-theme="A Date in Bloom" data-style="bloom"><div class="theme-art art-bloom"><span class="art-kicker">Save the date</span><strong>Our<br>forever<br>begins.</strong><span class="art-date">18 FEBRUARY 2027</span><span class="art-flower">✿</span></div><div class="theme-card-info"><div><h3>A Date in Bloom</h3><p>Floral · Blush & sage</p></div><button class="play-theme" aria-label="Play A Date in Bloom preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Save the Date" data-theme="The Postcard" data-style="postcard"><div class="theme-art art-postcard"><span class="art-kicker">A little note from us</span><strong>Save<br>our date.</strong><span class="art-date">JAIPUR · 18.02.27</span></div><div class="theme-card-info"><div><h3>The Postcard</h3><p>Travel · Warm paper</p></div><button class="play-theme" aria-label="Play The Postcard preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Save the Date" data-theme="Golden Hour" data-style="sunset"><div class="theme-art art-sunset"><span class="art-kicker">One beautiful beginning</span><strong>18<br><i>·</i> 02 <i>·</i> 27</strong><span class="art-date">SAVE THE DATE</span></div><div class="theme-card-info"><div><h3>Golden Hour</h3><p>Sunset · Terracotta</p></div><button class="play-theme" aria-label="Play Golden Hour preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bachelorette" data-theme="Disco Darling" data-style="disco"><div class="theme-art art-disco"><span class="art-kicker">One last fling</span><strong>Disco<br>Darling</strong><span class="art-date">THE GIRLS' NIGHT OUT</span><span class="art-star">✦</span></div><div class="theme-card-info"><div><h3>Disco Darling</h3><p>Party · Pink & silver</p></div><button class="play-theme" aria-label="Play Disco Darling preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bachelorette" data-theme="Girls in Bloom" data-style="girls"><div class="theme-art art-girls"><span class="art-kicker">Bride's celebration</span><strong>Girls<br>in Bloom</strong><span class="art-date">A LITTLE PARTY, A LOT OF LOVE</span><span class="art-flower">✿</span></div><div class="theme-card-info"><div><h3>Girls in Bloom</h3><p>Playful · Peach & pink</p></div><button class="play-theme" aria-label="Play Girls in Bloom preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bachelorette" data-theme="Champagne Club" data-style="champagne"><div class="theme-art art-champagne"><span class="art-kicker">A toast to the bride</span><strong>Pop<br>the<br>confetti</strong><span class="art-date">BACHELORETTE PARTY</span></div><div class="theme-card-info"><div><h3>Champagne Club</h3><p>Glam · Black & gold</p></div><button class="play-theme" aria-label="Play Champagne Club preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bachelor Party" data-theme="The Last Lap" data-style="lap"><div class="theme-art art-lap"><span class="art-kicker">The groom's last ride</span><strong>Last<br>Lap.</strong><span class="art-date">THE BOYS' WEEKEND</span></div><div class="theme-card-info"><div><h3>The Last Lap</h3><p>Sport · Racing green</p></div><button class="play-theme" aria-label="Play The Last Lap preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bachelor Party" data-theme="Midnight Social" data-style="midnight"><div class="theme-art art-midnight"><span class="art-kicker">The night is young</span><strong>Midnight<br>Social</strong><span class="art-date">BACHELOR PARTY · 2027</span><span class="art-star">✦</span></div><div class="theme-card-info"><div><h3>Midnight Social</h3><p>Nightlife · Navy & copper</p></div><button class="play-theme" aria-label="Play Midnight Social preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Engagement" data-theme="The Yes Moment" data-style="yes"><div class="theme-art art-yes"><span class="art-kicker">A little yes, a lifetime</span><strong>She said<br>yes.</strong><span class="art-date">CELEBRATE WITH US</span><span class="art-ring">◯</span></div><div class="theme-card-info"><div><h3>The Yes Moment</h3><p>Romantic · Rose & cream</p></div><button class="play-theme" aria-label="Play The Yes Moment preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Engagement" data-theme="Olive Branch" data-style="olive"><div class="theme-art art-olive"><span class="art-kicker">A promise begins</span><strong>Two souls.<br>One story.</strong><span class="art-date">ENGAGEMENT CELEBRATION</span></div><div class="theme-card-info"><div><h3>Olive Branch</h3><p>Minimal · Olive & linen</p></div><button class="play-theme" aria-label="Play Olive Branch preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bridal Shower" data-theme="Petal Party" data-style="petal"><div class="theme-art art-petal"><span class="art-kicker">A shower of love</span><strong>Petal<br>Party</strong><span class="art-date">CELEBRATING THE BRIDE</span><span class="art-flower">✿</span></div><div class="theme-card-info"><div><h3>Petal Party</h3><p>Garden · Lilac & rose</p></div><button class="play-theme" aria-label="Play Petal Party preview">▶ <span>Tap to play</span></button></div></article>
+   <article class="theme-card" data-category="Bridal Shower" data-theme="Sunday Brunch" data-style="brunch"><div class="theme-art art-brunch"><span class="art-kicker">A lovely afternoon</span><strong>Brunch<br>with the bride</strong><span class="art-date">GOOD FOOD · GREAT COMPANY</span></div><div class="theme-card-info"><div><h3>Sunday Brunch</h3><p>Fresh · Butter yellow</p></div><button class="play-theme" aria-label="Play Sunday Brunch preview">▶ <span>Tap to play</span></button></div></article>
+  </div>
+  <p class="library-footnote">Original Invite Wala theme concepts. Preview names, dates and details are illustrative.</p>
+ </div>
+</section>
+<div class="theme-preview" id="themePreview" aria-hidden="true"><div class="theme-preview-panel"><button class="theme-preview-close" aria-label="Close preview">×</button><div class="preview-phone"><div class="preview-speaker"></div><div class="preview-screen" id="themePreviewScreen"></div></div><div class="preview-controls"><span id="previewThemeName">Theme preview</span><button id="replayTheme">↻ Replay</button></div></div></div>
 <section class="section how" id="process"><div class="wrap"><div class="section-head"><div class="eyebrow">Simple, from start to share</div><h2>Your invite, in three little steps.</h2><p>From first idea to a link your guests can open and enjoy on their phones.</p></div><div class="steps"><div><div class="step-num">01</div><h3>Choose your style</h3><p>Browse the collection and tell us which design caught your eye.</p></div><div><div class="step-num">02</div><h3>Make it yours</h3><p>Share your event details, wording and preferences. We’ll shape the invite around your celebration.</p></div><div><div class="step-num">03</div><h3>Share the joy</h3><p>Review your final invitation and receive your ready-to-share digital link.</p></div></div></div></section>
 <section class="section wrap about" id="about"><div class="about-grid"><div class="about-art"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=75" alt="Wedding celebration details"></div><div><div class="eyebrow">A note from Invite Wala</div><h2>Little details.<br>Big feelings.</h2><p>We believe an invitation should feel like the beginning of the celebration. Invite Wala creates digital invitations that bring together thoughtful design, personal details and delightful interactive moments.</p><p>Made for modern celebrations, wherever your people may be.</p></div></div></section>
 <section class="section wrap"><div class="section-head"><div class="eyebrow">Good to know</div><h2>A few little answers.</h2></div><div class="faq"><details><summary>Can the invitation be personalised?</summary><p>Yes. Names, dates, venue details, event schedule, wording, colours and selected design elements can be personalised.</p></details><details><summary>Will guests need to install an app?</summary><p>No. Your digital invitation is shared as a link and can be opened in a browser on a phone.</p></details><details><summary>How long does it take?</summary><p>Turnaround depends on the design and the details you need. We’ll confirm the timeline with your quote.</p></details><details><summary>Can I see a preview before final delivery?</summary><p>Yes. A watermarked preview can be shared for review. Final unwatermarked files or links are delivered after approval and payment as agreed.</p></details></div></section>
 
 </main><footer class="wrap footer"><span>© <span id="year"></span> Invite Wala. Made for your moments.</span><span>Instagram · @invite._wala</span></footer>
-<div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-label="Interactive invitation preview"><div class="modal-box"><button class="close" aria-label="Close preview">×</button><div class="phone-screen" id="phoneScreen"><div class="phone-top"></div><div id="inviteExperience"></div></div></div></div>
+></div>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-const cards=[...document.querySelectorAll('.design')];
-document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');cards.forEach(c=>c.style.display=b.dataset.filter==='all'||c.dataset.category===b.dataset.filter?'':'none')}));
-const modal=document.getElementById('previewModal'),phoneScreen=document.getElementById('phoneScreen'),experience=document.getElementById('inviteExperience');
-const photos={
- mehendi:['https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=650&q=80','https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=500&q=80'],
- wedding:['https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=750&q=80','https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80'],
- reception:['https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80','https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80'],
- prewedding:['https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=650&q=80','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80']
-};
-function eventSection(label,title,date,place,imgs,style){
- const gallery=imgs.map((src,i)=>'<img loading="lazy" src="'+src+'" alt="Wedding inspiration photograph">').join('');
- const query=encodeURIComponent(place+' Jaipur Rajasthan');
- return '<div class="event-block"><div class="event-tag">'+label+'</div><h3>'+title+'</h3><p class="event-meta">'+date+'<br>'+place+'</p><div class="event-gallery '+style+'">'+gallery+'</div><div class="map-card"><div class="map-road"></div><div class="map-river"></div><div class="map-pin"></div><div class="map-label">'+place+'</div></div><a class="map-open" href="https://www.google.com/maps/search/?api=1&query='+query+'" target="_blank" rel="noopener">View location on map ↗</a></div>';
+const tabs=[...document.querySelectorAll('.theme-tab')], themeCards=[...document.querySelectorAll('.theme-card')];
+function showCategory(category){
+ tabs.forEach(t=>{const active=t.dataset.category===category;t.classList.toggle('active',active);t.setAttribute('aria-selected',String(active))});
+ themeCards.forEach(c=>c.hidden=c.dataset.category!==category);
 }
-function buildStory(name){
- return '<section class="scene-next"><div class="micro">The celebration</div><h3>Join us for the festivities</h3><div class="gold-rule"></div><p>Together with our families, we invite you to join us for an unforgettable celebration of love, laughter and new beginnings.</p><div class="names">Aarav <span style="color:#b18b57">&</span> Aadhya</div><p>With joyful hearts, we request the pleasure of your company as we begin our forever.</p>'+eventSection('01 · The welcome','Mehendi','Saturday · 17 February 2027 · 4:00 PM','The Courtyard, Jaipur',photos.mehendi,'')+eventSection('02 · The vows','Wedding Ceremony','Sunday · 18 February 2027 · 6:30 PM','The Palace Gardens, Jaipur',photos.wedding,'wedding-gallery')+eventSection('03 · The evening','Reception','Monday · 19 February 2027 · 7:00 PM','The Grand Ballroom, Jaipur',photos.reception,'reception-gallery')+'<div class="event-block"><div class="event-tag">A little glimpse of us</div><h3>Before the forever</h3><div class="event-gallery wedding-gallery">'+photos.prewedding.map(src=>'<img loading="lazy" src="'+src+'" alt="Pre-wedding inspiration photograph">').join('')+'</div><p class="photo-note">Sample photo inspiration · Replace with the couple’s own photographs</p></div><div class="route-line"></div><p class="event-meta" style="text-align:center">We cannot wait to celebrate with you.</p></section><section class="scene-footer"><div style="font:italic 27px Playfair Display">With love,</div><p>The families of Aarav & Aadhya</p><div style="color:#c8a875;font-size:22px">❧ ✦ ❧</div><p>INVITE WALA · MADE FOR YOUR MOMENTS</p></section>';
+tabs.forEach(t=>t.addEventListener('click',()=>showCategory(t.dataset.category)));
+showCategory('Wedding');
+const preview=document.getElementById('themePreview'),screen=document.getElementById('themePreviewScreen'),themeName=document.getElementById('previewThemeName');
+let activeCard=null,playTimer=null;
+function playTheme(card){
+ activeCard=card;clearTimeout(playTimer);
+ const style=card.dataset.style,title=card.dataset.theme;
+ themeName.textContent=title;
+ screen.innerHTML='<div class="preview-art '+('art-'+style)+'"><span class="preview-kicker">YOU ARE INVITED</span><div class="preview-flourish">✦</div><h2>Aarav <i>&</i><br>Aadhya</h2><div class="preview-line"></div><p>TO CELEBRATE THEIR WEDDING</p><strong>18 FEBRUARY 2027</strong><small>JAIPUR · RAJASTHAN</small><div class="preview-bottom">TOGETHER WITH OUR FAMILIES</div></div><div class="preview-scroll-cue">SCROLL TO DISCOVER <span>↓</span></div>';
+ preview.classList.add('open');preview.setAttribute('aria-hidden','false');document.body.classList.add('preview-open');
+ screen.querySelector('.preview-art').classList.remove('playing');
+ requestAnimationFrame(()=>requestAnimationFrame(()=>screen.querySelector('.preview-art').classList.add('playing')));
 }
-function renderInvite(card){
- const name=card.dataset.name;
- let mode='gate';
- if(name==='The Garden Edit')mode='floral';else if(name==='The Modern Muse')mode='envelope';else if(name==='The Intimate Note')mode='scratch';else if(name==='The Celebration Edit')mode='curtain';else if(name==='The Royal Affair')mode='scroll';
- const base='<section class="invite-scene '+(mode==='floral'?'scene-floral':mode==='curtain'?'scene-curtain':mode==='envelope'?'scene-envelope':mode==='scratch'?'scene-scratch':'')+'">';
- const intro=(k,t,p)=>'<div class="micro">'+k+'</div><h2>'+t+'</h2><div class="gold-rule"></div><p>'+p+'</p>';
- let opening='';
- if(mode==='floral')opening=base+intro('A garden of promises','Love is in bloom','Touch the invitation and watch a little garden come to life.')+'<div class="bloom-bouquet"><div class="bloom-leaf"></div><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i></div><button class="scene-button" id="bloomBtn">Let the flowers bloom</button><p class="unlock-note">Open the flowers to continue</p></section>';
- else if(mode==='envelope')opening=base+intro('A note, sealed with love','A little note for you','Tap the wax seal to unfold the invitation.')+'<div class="envelope-wrap" id="envelope"><div class="envelope-back"></div><div class="envelope-letter"><span>YOU ARE CORDIALLY INVITED</span><strong>Aarav & Aadhya</strong><span>TO CELEBRATE THEIR WEDDING</span></div><div class="envelope-front"></div><div class="envelope-flap"></div><button class="envelope-seal" id="sealBtn" aria-label="Open envelope">✦</button></div><p class="unlock-note">Unseal the envelope to continue</p></section>';
- else if(mode==='scratch')opening=base+intro('A little surprise','Unveil the joy','Reveal the keepsake to enter the celebration.')+'<div class="scratch-card" id="scratchCard"><div class="scratch-reveal"><div class="micro">Save the date</div><strong>Aarav<br>& Aadhya</strong><p>18 · 02 · 2027</p><p>Jaipur, Rajasthan</p></div><button class="scratch-cover" id="scratchBtn">✦ &nbsp; Scratch to reveal &nbsp; ✦</button></div><p class="unlock-note">Reveal the date to continue</p></section>';
- else if(mode==='curtain')opening=base+intro('The celebration begins','A grand reveal','Draw back the curtains and enter the festivities.')+'<div class="curtain-stage" id="curtainStage"><div class="curtain-message"><div class="micro">Together with our families</div><strong>Aarav & Aadhya</strong><p>request the pleasure of your company</p></div><div class="curtain-panel left"></div><div class="curtain-panel right"></div></div><button class="scene-button" id="curtainBtn">Open the curtains</button><p class="unlock-note">Reveal the celebration to continue</p></section>';
- else if(mode==='scroll')opening='<section class="invite-scene scene-scroll">'+intro('A royal announcement','Unfurl the celebration','Draw down the golden scroll to discover the invitation.')+'<div class="scroll-frame" id="scrollFrame"><div class="scroll-rod top"></div><div class="scroll-paper"><span>WITH THE BLESSINGS OF OUR FAMILIES</span><strong>Aarav<br>&<br>Aadhya</strong><span>REQUEST THE HONOUR OF YOUR PRESENCE</span><div class="gold-rule"></div><p>18 February 2027<br>Jaipur, Rajasthan</p></div><div class="scroll-rod bottom"></div></div><button class="scene-button" id="scrollBtn">Unfurl the royal scroll</button><p class="unlock-note">Unfurl to continue</p></section>';
- else opening='<section class="invite-scene scene-gate">'+intro('An invitation to remember','A royal beginning','Open the doors and step into our celebration.')+'<div class="mini-gate" id="miniGate"><div class="mini-gate-paper">Aarav<br><span style="font-size:13px">&</span><br>Aadhya</div><div class="mini-gate-door left"></div><div class="mini-gate-door right"></div></div><button class="scene-button" id="gateBtn">Open the royal doors</button><p class="unlock-note">Open the doors to continue</p></section>';
- experience.innerHTML=opening+buildStory(name);
- phoneScreen.classList.remove('unlocked');phoneScreen.scrollTop=0;
- const unlock=()=>{phoneScreen.classList.add('unlocked');const hint=document.querySelector('.unlock-note');if(hint)hint.textContent='Scroll to explore the celebrations'};
- const bind=(id,fn)=>{const el=document.getElementById(id);if(el)el.addEventListener('click',fn)};
- bind('bloomBtn',()=>{document.querySelector('.scene-floral').classList.add('bloomed');document.getElementById('bloomBtn').textContent='A garden in full bloom';unlock()});
- bind('sealBtn',()=>{document.getElementById('envelope').classList.add('unsealed');unlock()});
- bind('scratchBtn',()=>{document.getElementById('scratchCard').classList.add('revealed');unlock()});
- bind('curtainBtn',()=>{document.getElementById('curtainStage').classList.add('revealed');document.getElementById('curtainBtn').textContent='The celebration is revealed';unlock()});
- bind('scrollBtn',()=>{document.getElementById('scrollFrame').classList.add('unfurled');document.getElementById('scrollBtn').textContent='The royal invitation is revealed';unlock()});
- bind('gateBtn',()=>{document.getElementById('miniGate').classList.add('open');document.getElementById('gateBtn').textContent='Welcome to our celebration';unlock()});
-}
-cards.forEach(c=>c.addEventListener('click',()=>{renderInvite(c);modal.classList.add('open');document.body.style.overflow='hidden'}));
-function closeModal(){modal.classList.remove('open');document.body.style.overflow='';experience.innerHTML='';phoneScreen.classList.remove('unlocked');phoneScreen.scrollTop=0}
-document.querySelector('.close').addEventListener('click',closeModal);
-modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
-
-/* Interactive invitation builder — front-end prototype */
-(()=>{
-const panel=document.getElementById('wizardPanel'),steps=[...document.querySelectorAll('.wizard-step')],back=document.getElementById('wizardBack'),next=document.getElementById('wizardNext'),status=document.getElementById('creatorStatus');
-if(!panel||!next)return;
-const state={step:0,event:'Wedding',theme:'Mogra Garden',name1:'Aarav',name2:'Aadhya',date:'',time:'',venue:'',city:'',language:'English',extras:[]};
-const themes=[['Mogra Garden','Floral · Ivory & green'],['Royal Jaal','Heritage · Emerald & gold'],['Gulabi Shaam','Romantic · Rose & blush'],['Marigold Days','Festive · Saffron & ivory'],['The Palace Edit','Regal · Deep wine'],['Modern Noor','Minimal · Sand & ink'],['Pearl Ceremony','Classic · Pearl & champagne'],['Lotus Courtyard','Botanical · Sage & cream'],['Sunehri','Gold · Warm neutrals'],['Indigo Heirloom','Artisan · Indigo & ivory'],['The Jasmine Note','Delicate · White & green'],['Midnight Mehfil','Evening · Navy & gold'],['Terracotta Love','Earthy · Clay & beige'],['The Ivory Story','Minimal · Ivory & taupe'],['Rangrez','Colourful · Jewel tones'],['Monsoon Garden','Floral · Blue & green'],['Rosewood','Vintage · Rose & brown'],['Saffron Sky','Modern · Saffron & peach']];
-const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function render(){
- steps.forEach((s,i)=>{s.classList.toggle('active',i===state.step);s.classList.toggle('done',i<state.step)});
- back.disabled=state.step===0;next.textContent=state.step===4?'Create preview':'Continue';status.textContent='Step '+(state.step+1)+' of 5';
- if(state.step===0){panel.innerHTML='<h3>What are you celebrating?</h3><p>Choose the occasion for your invitation.</p><div class="choice-grid" data-group="event">'+[['Wedding','The big celebration'],['Save the Date','A first announcement'],['Engagement','Celebrate your yes'],['Haldi','Sunshine and marigolds'],['Mehendi','Colourful festivities'],['Reception','An evening to remember'],['Sangeet','Music, dance and joy'],['Bachelorette','One more celebration'],['Baby Shower','A little new beginning']].map(([a,b])=>'<button class="choice '+(state.event===a?'selected':'')+'" data-value="'+a+'"><strong>'+a+'</strong><small>'+b+'</small></button>').join('')+'</div>'}
- if(state.step===1){panel.innerHTML='<h3>Choose your visual story.</h3><p>Each theme has its own palette and character. These are original Invite Wala concepts.</p><div class="choice-grid">'+themes.map(([a,b])=>'<button class="choice theme-choice '+(state.theme===a?'selected':'')+'" data-theme="'+a+'"><span class="theme-swatch"></span><strong>'+a+'</strong><small>'+b+'</small></button>').join('')+'</div>'}
- if(state.step===2){panel.innerHTML='<h3>Make it personal.</h3><p>Add the details you know now. You can refine the sample later.</p><div class="field-grid"><label class="field">First name<input data-field="name1" value="'+esc(state.name1)+'" placeholder="Name 1"></label><label class="field">Second name<input data-field="name2" value="'+esc(state.name2)+'" placeholder="Name 2"></label><label class="field">Date<input data-field="date" type="date" value="'+esc(state.date)+'"></label><label class="field">Time<input data-field="time" type="time" value="'+esc(state.time)+'"></label><label class="field">Venue<input data-field="venue" value="'+esc(state.venue)+'" placeholder="Venue name"></label><label class="field">City<input data-field="city" value="'+esc(state.city)+'" placeholder="City, state"></label></div>'}
- if(state.step===3){panel.innerHTML='<h3>Which language should your invite speak?</h3><p>Choose the main language for the invitation copy.</p><div class="choice-grid">'+[['English','A familiar favourite'],['हिन्दी','Hindi'],['मराठी','Marathi'],['ગુજરાતી','Gujarati'],['ਪੰਜਾਬੀ','Punjabi'],['বাংলা','Bengali'],['தமிழ்','Tamil'],['తెలుగు','Telugu'],['ಕನ್ನಡ','Kannada'],['മലയാളം','Malayalam']].map(([a,b])=>'<button class="choice '+(state.language===a?'selected':'')+'" data-language="'+a+'"><strong>'+a+'</strong><small>'+b+'</small></button>').join('')+'</div>'}
- if(state.step===4){panel.innerHTML='<h3>Add thoughtful finishing touches.</h3><p>Select any extras you would like included in your concept.</p><div class="check-row">'+[['Countdown','A live countdown'],['Photo gallery','A collection of memories'],['Our story','Your journey together'],['Venue maps','Directions for guests'],['RSVP','Guest response form'],['Background music','A soundtrack for the invite'],['Multiple events','Mehendi, wedding and more'],['Family details','Names and blessings']].map(([a,b])=>'<label class="check-pill"><input type="checkbox" data-extra="'+a+'" '+(state.extras.includes(a)?'checked':'')+'> <span><b>'+a+'</b><br><small>'+b+'</small></span></label>').join('')+'</div><div class="builder-preview"><div class="preview-mark">INVITE WALA · YOUR FIRST LOOK</div><p>'+esc(state.event)+' INVITATION</p><h4>'+esc(state.name1)+' & '+esc(state.name2)+'</h4><p>'+esc(state.date||'Your celebration date')+' '+esc(state.time)+'</p><p>'+esc([state.venue,state.city].filter(Boolean).join(', ')||'Your venue details')+'</p><div class="gold-rule"></div><p>'+esc(state.theme)+' · '+esc(state.language)+'</p></div><p class="builder-note">Preview concept only. This prototype does not yet publish a guest-ready invitation or save guest responses.</p>'}
- }
-panel.addEventListener('click',e=>{const b=e.target.closest('[data-value],[data-theme],[data-language]');if(!b)return;if(b.dataset.value){state.event=b.dataset.value;panel.querySelectorAll('[data-value]').forEach(x=>x.classList.toggle('selected',x===b))}if(b.dataset.theme){state.theme=b.dataset.theme;panel.querySelectorAll('[data-theme]').forEach(x=>x.classList.toggle('selected',x===b))}if(b.dataset.language){state.language=b.dataset.language;panel.querySelectorAll('[data-language]').forEach(x=>x.classList.toggle('selected',x===b))}});
-panel.addEventListener('input',e=>{if(e.target.dataset.field)state[e.target.dataset.field]=e.target.value;if(e.target.dataset.extra){const v=e.target.dataset.extra;state.extras=e.target.checked?[...new Set([...state.extras,v])]:state.extras.filter(x=>x!==v)}});
-back.addEventListener('click',()=>{if(state.step>0){state.step--;render()}});
-next.addEventListener('click',()=>{if(state.step<4){state.step++;render();panel.scrollIntoView({behavior:'smooth',block:'nearest'})}else{status.textContent='Your concept is ready';next.textContent='Preview created';next.disabled=true;const p=panel.querySelector('.builder-preview');if(p)p.style.boxShadow='0 0 0 2px #2e6654';}});
-render();
-})();
-
+themeCards.forEach(card=>card.querySelector('.play-theme').addEventListener('click',()=>playTheme(card)));
+function closePreview(){preview.classList.remove('open');preview.setAttribute('aria-hidden','true');document.body.classList.remove('preview-open');clearTimeout(playTimer)}
+preview.querySelector('.theme-preview-close').addEventListener('click',closePreview);
+preview.addEventListener('click',e=>{if(e.target===preview)closePreview()});
+document.getElementById('replayTheme').addEventListener('click',()=>{if(activeCard)playTheme(activeCard)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&preview.classList.contains('open'))closePreview()});
 </script>
 </body></html>

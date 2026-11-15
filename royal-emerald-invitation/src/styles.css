@@ -12,3 +12,16 @@
 .palace-floor{position:absolute;left:0;right:0;bottom:-3%;height:24%;background:radial-gradient(ellipse at 50% 0%,#d6b65b25,transparent 66%),linear-gradient(0deg,#061711 0%,#0b241caa 45%,transparent 100%);border-top:1px solid #d5b45b55}
 @keyframes pillarShimmer{from{filter:brightness(.82)}to{filter:brightness(1.22)}}
 @media(max-width:600px){.palace-arch{top:13%;width:86vw;height:94vw}.palace-column{top:25%;height:48%;width:clamp(15px,4vw,24px)}.column-mid-left,.column-mid-right{top:32%;height:41%}.column-left{left:4%}.column-right{right:4%}}
+
+/* Framer Motion choreography for the royal entrance */
+.palace-column{transform-origin:50% 100%;will-change:transform,opacity,filter;animation:pillarGlow 4.8s ease-in-out infinite alternate}
+.palace-column:nth-of-type(3){animation-delay:.45s}.palace-column:nth-of-type(4){animation-delay:.9s}.palace-column:nth-of-type(5){animation-delay:1.35s}
+.pillar-glint{position:absolute;inset:-2% -35%;overflow:hidden;opacity:0;pointer-events:none}
+.pillar-glint:after{content:"";position:absolute;top:-15%;left:-70%;width:45%;height:130%;transform:skewX(-18deg);background:linear-gradient(90deg,transparent,#fff8d9aa 48%,transparent);filter:blur(3px);animation:goldSweep 4.6s ease-in-out infinite}
+.palace-crown{position:absolute;z-index:2;left:50%;top:10%;width:clamp(28px,4vw,48px);height:clamp(28px,4vw,48px);transform:translateX(-50%);border:2px solid #f2d98f;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff6ce,#c09237 55%,#53380e);box-shadow:0 0 14px #f0d27b,0 0 36px #d8a83e88}
+.palace-crown:before,.palace-crown:after{content:"";position:absolute;background:#f4d98f;box-shadow:0 0 10px #ffe9a4}
+.palace-crown:before{width:150%;height:2px;left:-25%;top:50%}
+.palace-crown:after{width:2px;height:150%;top:-25%;left:50%}
+@keyframes goldSweep{0%,18%{left:-70%;opacity:0}30%{opacity:.9}65%{left:130%;opacity:0}100%{left:130%;opacity:0}}
+@keyframes pillarGlow{from{filter:brightness(.88) drop-shadow(0 0 4px #d6ad4c33)}to{filter:brightness(1.17) drop-shadow(0 0 13px #e7c56d88)}}
+@media(prefers-reduced-motion:reduce){.palace-column,.pillar-glint:after{animation:none!important}}

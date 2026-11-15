@@ -96,3 +96,8 @@ input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeh
 /* Button reset for the animated wax seal */
 .envelope-seal{padding:0;border:3px double #f3dfaa;font:inherit;appearance:none;-webkit-appearance:none;outline-offset:5px}
 .envelope-seal:focus-visible{outline:2px solid #a87937}
+
+/* Real 3D envelope flap opening */
+.heirloom-envelope{transform-style:preserve-3d;overflow:visible}
+.envelope-flap{transform-origin:50% 0%;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;z-index:5}
+.envelope-seal{z-index:6}

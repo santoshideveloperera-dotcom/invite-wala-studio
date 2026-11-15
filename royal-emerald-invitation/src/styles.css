@@ -92,3 +92,7 @@ input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeh
 .envelope-seal span{font-size:1.6rem}.envelope-seal small{font-size:.48rem;letter-spacing:.2em}.envelope-hint{font:italic 1.1rem "Cormorant Garamond";color:#987a56;margin:20px 0 10px}.envelope-open{font-size:.68rem;box-shadow:0 6px 20px #98744322}
 @keyframes sealPulse{0%,100%{box-shadow:0 4px 15px #77552d66,inset 0 0 0 4px #9a6c2e}50%{box-shadow:0 4px 24px #c09a6077,inset 0 0 0 4px #9a6c2e}}
 @media(max-width:480px){.heirloom-envelope{width:min(88vw,390px)}.envelope-caption{margin-bottom:16px}}
+
+/* Button reset for the animated wax seal */
+.envelope-seal{padding:0;border:3px double #f3dfaa;font:inherit;appearance:none;-webkit-appearance:none;outline-offset:5px}
+.envelope-seal:focus-visible{outline:2px solid #a87937}

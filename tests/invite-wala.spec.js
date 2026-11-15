@@ -8,7 +8,7 @@ test.describe("Invite Wala invitation gallery", () => {
 
   test("PV-01: tapping a design opens the selected invitation preview", async ({ page }) => {
     const firstCard = page.locator("#templateGrid .template-card").first();
-    const cardDescription = await firstCard.locator(".card-info p").innerText();
+    const cardKicker = (await firstCard.locator(".micro").innerText()).toUpperCase();
 
     await firstCard.locator(".play-pill").click();
 
@@ -17,8 +17,7 @@ test.describe("Invite Wala invitation gallery", () => {
     await expect(page.locator("#previewModal #pNames")).toContainText("Aarav");
     await expect(page.locator("#previewModal #pStoryTitle")).toBeVisible();
     await expect(page.locator("#previewModal #pCover")).toBeVisible();
-    const description = cardDescription.split(" · ").slice(1).join(" · ");
-    await expect(page.locator("#pStory")).toContainText(description);
+    await expect(page.locator("#pKicker")).toHaveText(cardKicker);
   });
 
   test("PV-02: invitation sections scroll inside the phone mockup", async ({ page }) => {
@@ -91,13 +90,12 @@ test.describe("Invite Wala invitation gallery", () => {
   test("LM-02: a newly loaded design also opens its preview", async ({ page }) => {
     await page.locator("#loadMore").click();
     const newlyLoadedCard = page.locator("#templateGrid .template-card").nth(12);
-    const cardDescription = await newlyLoadedCard.locator(".card-info p").innerText();
+    const cardKicker = (await newlyLoadedCard.locator(".micro").innerText()).toUpperCase();
 
     await newlyLoadedCard.locator(".play-pill").click();
 
     await expect(page.locator("#previewModal")).toHaveClass(/open/);
-    const description = cardDescription.split(" · ").slice(2).join(" · ");
-    await expect(page.locator("#pStory")).toContainText(description);
+    await expect(page.locator("#pKicker")).toHaveText(cardKicker);
   });
 
   test("RG-01: gallery initializes without page errors", async ({ page }) => {

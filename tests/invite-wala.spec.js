@@ -17,7 +17,7 @@ test.describe("Invite Wala invitation gallery", () => {
     await expect(page.locator("#previewModal #pNames")).toContainText("Aarav");
     await expect(page.locator("#previewModal #pStoryTitle")).toBeVisible();
     await expect(page.locator("#previewModal #pCover")).toBeVisible();
-    const description = cardDescription.split(" · ").slice(2).join(" · ");
+    const description = cardDescription.split(" · ").slice(1).join(" · ");
     await expect(page.locator("#pStory")).toContainText(description);
   });
 

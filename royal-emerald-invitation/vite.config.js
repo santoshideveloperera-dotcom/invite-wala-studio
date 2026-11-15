@@ -1,8 +1,9 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
-  base:'./',
-  plugins:[react(),tailwindcss()],
-  build:{rollupOptions:{input:{index:'index.template.html'}}}
+  // Build relative asset URLs so the app works from the GitHub Pages subpath.
+  base: './',
+  plugins: [react(), tailwindcss()],
 });

@@ -25,3 +25,35 @@
 @keyframes goldSweep{0%,18%{left:-70%;opacity:0}30%{opacity:.9}65%{left:130%;opacity:0}100%{left:130%;opacity:0}}
 @keyframes pillarGlow{from{filter:brightness(.88) drop-shadow(0 0 4px #d6ad4c33)}to{filter:brightness(1.17) drop-shadow(0 0 13px #e7c56d88)}}
 @media(prefers-reduced-motion:reduce){.palace-column,.pillar-glint:after{animation:none!important}}
+
+/* Ivory and antique-gold heirloom redesign */
+:root{font-family:"Cormorant Garamond",serif;color:#5b4635;background:#f7efe4}html,body{background:#f7efe4;color:#5b4635}
+.scene{background:radial-gradient(ellipse at 50% 36%,#fffaf1 0%,#f1e2cd 52%,#d8bd98 100%)}
+.scene canvas{opacity:.16;filter:sepia(.45) brightness(1.4)}
+.scene-fallback{background:radial-gradient(ellipse at 50% 38%,#fffaf2 0%,#f4e8d8 52%,#ddc6a7 100%)}
+.palace-overlay{background:radial-gradient(ellipse at 50% 42%,#fffaf055,transparent 65%)}
+.palace-arch{border-color:#c09a60;box-shadow:0 0 18px #c09a6044,inset 0 0 16px #c09a6022}
+.palace-arch:before{border-color:#e4c995}.palace-arch:after{border-color:#b88c50}
+.palace-column{background:linear-gradient(90deg,#9c7544 0%,#d7b77e 17%,#fff0ce 37%,#b88d50 57%,#f6dfad 76%,#8e693b 100%);box-shadow:0 0 18px #c09a6044,inset 0 0 8px #fff9}
+.palace-column i,.palace-column b{background:linear-gradient(#fff1d0,#b58b50 45%,#ead09b);box-shadow:0 0 13px #c09a6066}
+.palace-floor{background:radial-gradient(ellipse at 50% 0%,#c9a56b33,transparent 66%),linear-gradient(0deg,#e5d2b9 0%,#f5eadb99 45%,transparent 100%);border-color:#c6a36b55}
+.palace-crown{border-color:#d8b779;background:radial-gradient(circle at 35% 28%,#fff8e5,#c79e5b 55%,#8a6331);box-shadow:0 0 14px #d7b77b,0 0 36px #d8a83e55}
+.palace-crown:before,.palace-crown:after{background:#d8b779}
+.gateintro{background:linear-gradient(transparent 12%,#f7efe4ee 72%);color:#624d38}
+.gateintro small,.heroCard>small,header small{color:#a77b42}
+.gateintro h1{color:#6c5036;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500}
+.gateintro p,.heroCard>p,header p{color:#92785e}
+.btn{border-color:#b68c52}.gold{background:linear-gradient(120deg,#b68b50,#f7e8c5,#c49b5d);color:#493522}.outline{color:#8c693e}
+.sound{background:#fffaf0e8;border-color:#c6a56d;color:#8b673b;box-shadow:0 5px 20px #8c704022}
+.site{color:#5b4635}.glass{background:linear-gradient(135deg,#fffaf2ee,#f5ead9ed);border:1px solid #c5a36d88;box-shadow:0 18px 60px #8c704022,inset 0 1px #fff;backdrop-filter:blur(14px)}
+.hero{background:radial-gradient(ellipse at 50% 50%,#fffaf0aa,transparent 68%)}
+.heroCard{position:relative;border:1px solid #c5a36d;background:linear-gradient(145deg,#fffaf4f2,#f4e6d4f2);box-shadow:0 20px 70px #8b6d4422,inset 0 0 0 7px #fff8,inset 0 0 0 8px #c5a36d55}
+.heroCard:before,.heroCard:after{content:"✿";position:absolute;color:#c5a36d;font-size:2rem;opacity:.65}.heroCard:before{top:12px;left:17px}.heroCard:after{right:17px;bottom:12px}
+.heroCard h1{font-family:"Cormorant Garamond",serif;color:#735638;font-weight:500;font-style:italic}.heroCard h1 em{color:#b58b50}.heroCard>svg{color:#bd9654}.heroCard hr{border-color:#c4a16a}
+.date,.heroCard>a{color:#9a7548}.timer b{color:#8c683f}.timer small{color:#9e886d}
+.section h2{font-family:"Cormorant Garamond",serif;color:#735638;font-style:italic;font-weight:500}
+.event h3,.save h3,.success h3{color:#735638}.event p,.save p{color:#92785e}.event div{color:#725e49}.event div svg{color:#b58b50}.event>small,.event label{color:#a17a47}.event>a{color:#9b7546}
+.caldate{border-color:#c5a36d;color:#956e3f}
+input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeholder{color:#aa9a84}form label{color:#846947}form small{color:#9b8b76}
+.success{color:#7c6244}.success>svg{color:#b58b50}.reset{color:#9a7548}footer{color:#a17a47}footer p{color:#735638}
+@media(prefers-reduced-motion:reduce){.palace-column{animation:none!important}}

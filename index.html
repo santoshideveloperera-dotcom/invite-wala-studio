@@ -75,6 +75,46 @@
 .scroll-paper strong{font:italic 25px 'Playfair Display';color:#6e2938}.scroll-paper span{font-size:8px;letter-spacing:.18em;color:#98774e;margin:10px 0}
 .scroll-frame.unfurled .scroll-paper{height:calc(100% - 18px);padding:15px 13px}
 .scroll-frame.unfurled .scroll-rod.bottom{bottom:0}
+
+/* iPhone-inspired invitation viewer */
+#previewModal .modal-box{width:min(405px,100%);height:min(820px,94dvh);border:8px solid #171719;border-radius:46px;padding:6px;background:#171719;box-shadow:0 30px 100px #000a,0 0 0 1px #b69a70;overflow:visible}
+#previewModal .close{right:-12px;top:-13px}
+.phone-screen{border-radius:33px;overflow-y:hidden;touch-action:pan-x;transition:overflow .2s}
+.phone-screen.unlocked{overflow-y:auto;touch-action:pan-y}
+.phone-top{height:34px}
+.phone-top:before{width:92px;height:23px;border-radius:18px;background:#171719}
+.phone-top:after{content:"";position:absolute;right:25px;top:11px;width:5px;height:5px;border-radius:50%;background:#5a6267;box-shadow:-8px 0 #333b40}
+.invite-scene{min-height:calc(100% - 34px);min-height:680px}
+.scene-next{min-height:auto;padding:54px 22px}
+.event-block{width:100%;padding:27px 0;border-top:1px solid #d7c6aa;text-align:left}
+.event-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.event-tag{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#9c805e}
+.event-block h3{font:italic 29px 'Playfair Display',serif;color:#6e2938;margin:7px 0}
+.event-meta{font-size:10px!important;line-height:1.8;color:#786654}
+.event-gallery{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:112px 112px;gap:7px;margin:15px 0}
+.event-gallery img{width:100%;height:100%;object-fit:cover;display:block;border-radius:2px;filter:saturate(.82)}
+.event-gallery img:first-child{grid-row:span 2}
+.event-gallery.wedding-gallery{grid-template-columns:1fr 1fr;grid-template-rows:150px 90px}
+.event-gallery.wedding-gallery img:first-child{grid-row:auto;grid-column:span 2}
+.event-gallery.reception-gallery{grid-template-columns:1fr 1fr;grid-template-rows:120px}
+.map-card{position:relative;min-height:130px;margin:14px 0 4px;overflow:hidden;border:1px solid #d5c19b;background-color:#e8e4d5;background-image:linear-gradient(28deg,transparent 46%,#fff9 47%,#fff9 50%,transparent 51%),linear-gradient(112deg,transparent 42%,#fff9 43%,#fff9 47%,transparent 48%),linear-gradient(0deg,transparent 48%,#d4d0bd 49%,#d4d0bd 51%,transparent 52%);background-size:100% 100%,100% 100%,55px 55px}
+.map-river{position:absolute;width:150%;height:25px;left:-20%;top:47%;background:#c5d9d3;transform:rotate(-17deg);border:1px solid #b4ccc5}
+.map-road{position:absolute;width:150%;height:8px;left:-20%;top:30%;background:#fffdf5;transform:rotate(24deg);box-shadow:0 0 0 1px #d4c9b6}
+.map-pin{position:absolute;left:50%;top:43%;width:25px;height:25px;background:#6e2938;border:3px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 7px #0004}
+.map-pin:after{content:"";position:absolute;width:6px;height:6px;background:#fff;border-radius:50%;left:6px;top:6px}
+.map-label{position:absolute;left:12px;bottom:9px;padding:6px 8px;background:#fffdf0eF;color:#57473b;font-size:8px;letter-spacing:.1em;text-transform:uppercase}
+.map-open{display:inline-block;margin-top:8px;color:#6e2938;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #b18b57;padding-bottom:3px}
+.route-line{height:2px;width:62%;background:#b18b57;margin:16px auto;position:relative}
+.route-line:before,.route-line:after{content:"";position:absolute;top:-4px;width:10px;height:10px;border-radius:50%;background:#6e2938}.route-line:before{left:0}.route-line:after{right:0}
+.photo-note{font-size:8px!important;letter-spacing:.1em;text-transform:uppercase;color:#9a8468!important}
+.unlock-note{font-size:9px!important;letter-spacing:.16em;text-transform:uppercase;color:#9d8159!important;margin-top:15px!important}
+.scene-floral{background:linear-gradient(155deg,#fbf5e9,#eee0d4)}
+.scene-envelope{background:linear-gradient(155deg,#fbf2e5,#e9d4bc)}
+.scene-scratch{background:linear-gradient(155deg,#f7eddf,#e8d7c1)}
+.scene-curtain{background:linear-gradient(155deg,#44232f,#6b3945)}
+.scene-scroll{background:linear-gradient(155deg,#f8edd8,#dec59d)}
+.scene-gate{background:radial-gradient(ellipse,#765244,#2b1b20)}
+@media(max-width:480px){#previewModal{padding:15px 10px}#previewModal .modal-box{height:94dvh;border-radius:43px}.invite-scene{min-height:650px;padding:30px 18px}}
 @media(max-width:480px){#previewModal{padding:17px 12px}#previewModal .modal-box{height:min(780px,94dvh);border-radius:34px}.invite-scene{min-height:560px;padding:30px 18px}.invite-scene h2{font-size:33px}}
 @media(prefers-reduced-motion:reduce){.bloom-flower,.bloom-leaf,.envelope-flap,.envelope-letter,.curtain-panel,.mini-gate-door,.scratch-cover{transition:none!important}}
 @media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.topbar{height:68px}.nav{gap:12px}.nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:28px;padding:55px 0}.hero-art,.hero-art img{min-height:330px;height:330px}.hero h1{font-size:48px}.section{padding:55px 0}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.design-image{height:230px}.design-info{padding:13px 11px}.design-info h3{font-size:17px}.price{font-size:10px}.steps{grid-template-columns:1fr;gap:28px}.about-grid,.contact-inner{grid-template-columns:1fr;gap:28px}.about-art{height:270px}.about h2,.contact h2{font-size:36px}.modal-img{height:300px}.footer{flex-direction:column}.hero-actions{gap:16px}}@media(max-width:390px){.grid{grid-template-columns:1fr}.design-image{height:300px}}
@@ -102,40 +142,47 @@
 document.getElementById('year').textContent=new Date().getFullYear();
 const cards=[...document.querySelectorAll('.design')];
 document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');cards.forEach(c=>c.style.display=b.dataset.filter==='all'||c.dataset.category===b.dataset.filter?'':'none')}));
-const modal=document.getElementById('previewModal');
-const phoneScreen=document.getElementById('phoneScreen');
-const experience=document.getElementById('inviteExperience');
-const sampleContent=(name)=>'<section class="scene-next"><div class="micro">The celebration</div><h3>'+name+'</h3><div class="gold-rule"></div><p>Together with our families, we invite you to join us for an unforgettable celebration of love, laughter and new beginnings.</p><div class="names">Aarav & Aadhya</div><p>Wedding Ceremony · Sunday, 18 February 2027<br>At 6:30 in the evening<br>Jaipur, Rajasthan</p></section><section class="scene-next" style="background:#efe2d0"><div class="micro">The festivities</div><h3>Join us for the celebrations</h3><p><b>Mehendi</b><br>Saturday · 17 February · 4 PM</p><p><b>Wedding</b><br>Sunday · 18 February · 6:30 PM</p><p><b>Reception</b><br>Monday · 19 February · 7 PM</p></section><section class="scene-footer"><div style="font:italic 25px Playfair Display">With love,</div><p>The families of Aarav & Aadhya<br>We cannot wait to celebrate with you.</p><div style="color:#c8a875;font-size:20px">❧ ✦ ❧</div><p>INVITE WALA · MADE FOR YOUR MOMENTS</p></section>';
-const intro=(kicker,title,copy)=>'<div class="micro">'+kicker+'</div><h2>'+title+'</h2><div class="gold-rule"></div><p>'+copy+'</p>';
+const modal=document.getElementById('previewModal'),phoneScreen=document.getElementById('phoneScreen'),experience=document.getElementById('inviteExperience');
+const photos={
+ mehendi:['https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=650&q=80','https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=500&q=80'],
+ wedding:['https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=750&q=80','https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80'],
+ reception:['https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80','https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80'],
+ prewedding:['https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=650&q=80','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80']
+};
+function eventSection(label,title,date,place,imgs,style){
+ const gallery=imgs.map((src,i)=>'<img loading="lazy" src="'+src+'" alt="Wedding inspiration photograph">').join('');
+ const query=encodeURIComponent(place+' Jaipur Rajasthan');
+ return '<div class="event-block"><div class="event-tag">'+label+'</div><h3>'+title+'</h3><p class="event-meta">'+date+'<br>'+place+'</p><div class="event-gallery '+style+'">'+gallery+'</div><div class="map-card"><div class="map-road"></div><div class="map-river"></div><div class="map-pin"></div><div class="map-label">'+place+'</div></div><a class="map-open" href="https://www.google.com/maps/search/?api=1&query='+query+'" target="_blank" rel="noopener">View location on map ↗</a></div>';
+}
+function buildStory(name){
+ return '<section class="scene-next"><div class="micro">The celebration</div><h3>Join us for the festivities</h3><div class="gold-rule"></div><p>Together with our families, we invite you to join us for an unforgettable celebration of love, laughter and new beginnings.</p><div class="names">Aarav <span style="color:#b18b57">&</span> Aadhya</div><p>With joyful hearts, we request the pleasure of your company as we begin our forever.</p>'+eventSection('01 · The welcome','Mehendi','Saturday · 17 February 2027 · 4:00 PM','The Courtyard, Jaipur',photos.mehendi,'')+eventSection('02 · The vows','Wedding Ceremony','Sunday · 18 February 2027 · 6:30 PM','The Palace Gardens, Jaipur',photos.wedding,'wedding-gallery')+eventSection('03 · The evening','Reception','Monday · 19 February 2027 · 7:00 PM','The Grand Ballroom, Jaipur',photos.reception,'reception-gallery')+'<div class="event-block"><div class="event-tag">A little glimpse of us</div><h3>Before the forever</h3><div class="event-gallery wedding-gallery">'+photos.prewedding.map(src=>'<img loading="lazy" src="'+src+'" alt="Pre-wedding inspiration photograph">').join('')+'</div><p class="photo-note">Sample photo inspiration · Replace with the couple’s own photographs</p></div><div class="route-line"></div><p class="event-meta" style="text-align:center">We cannot wait to celebrate with you.</p></section><section class="scene-footer"><div style="font:italic 27px Playfair Display">With love,</div><p>The families of Aarav & Aadhya</p><div style="color:#c8a875;font-size:22px">❧ ✦ ❧</div><p>INVITE WALA · MADE FOR YOUR MOMENTS</p></section>';
+}
 function renderInvite(card){
- const name=card.dataset.name,cat=card.dataset.category;
+ const name=card.dataset.name;
  let mode='gate';
- if(name==='The Garden Edit')mode='floral';
- else if(name==='The Modern Muse')mode='envelope';
- else if(name==='The Intimate Note')mode='scratch';
- else if(name==='The Celebration Edit')mode='curtain';
- else if(name==='The Royal Affair')mode='scroll';
- const base='<section class="invite-scene '+(mode==='floral'?'scene-floral':mode==='curtain'?'scene-curtain':'')+'">';
+ if(name==='The Garden Edit')mode='floral';else if(name==='The Modern Muse')mode='envelope';else if(name==='The Intimate Note')mode='scratch';else if(name==='The Celebration Edit')mode='curtain';else if(name==='The Royal Affair')mode='scroll';
+ const base='<section class="invite-scene '+(mode==='floral'?'scene-floral':mode==='curtain'?'scene-curtain':mode==='envelope'?'scene-envelope':mode==='scratch'?'scene-scratch':'')+'">';
+ const intro=(k,t,p)=>'<div class="micro">'+k+'</div><h2>'+t+'</h2><div class="gold-rule"></div><p>'+p+'</p>';
  let opening='';
- if(mode==='floral')opening=base+intro('A garden of promises','Love is in bloom','A little garden magic, made to open with a touch.')+'<div class="bloom-bouquet"><div class="bloom-leaf"></div><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i></div><button class="scene-button" id="bloomBtn">Let the flowers bloom</button><p class="scene-hint">Tap to reveal the invitation</p></section>';
- else if(mode==='envelope')opening=base+intro('A note, sealed with love','A little note for you','Every beautiful story begins with an invitation.')+'<div class="envelope-wrap" id="envelope"><div class="envelope-back"></div><div class="envelope-letter"><span>YOU ARE CORDIALLY INVITED</span><strong>Aarav & Aadhya</strong><span>TO CELEBRATE THEIR WEDDING</span></div><div class="envelope-front"></div><div class="envelope-flap"></div><button class="envelope-seal" id="sealBtn" aria-label="Open envelope">✦</button></div><p class="scene-hint">Tap the wax seal to open</p></section>';
- else if(mode==='scratch')opening=base+intro('A little surprise','Unveil the joy','Gently tap the keepsake to discover your invitation.')+'<div class="scratch-card" id="scratchCard"><div class="scratch-reveal"><div class="micro">Save the date</div><strong>Aarav<br>& Aadhya</strong><p>18 · 02 · 2027</p><p>Jaipur, Rajasthan</p></div><button class="scratch-cover" id="scratchBtn">✦ &nbsp; Scratch to reveal &nbsp; ✦</button></div><p class="scene-hint">Tap the cover to reveal</p></section>';
- else if(mode==='curtain')opening=base+intro('The celebration begins','A grand reveal','Draw the curtains and let the festivities begin.')+'<div class="curtain-stage" id="curtainStage"><div class="curtain-message"><div class="micro">Together with our families</div><strong>Aarav & Aadhya</strong><p>request the pleasure of your company</p></div><div class="curtain-panel left"></div><div class="curtain-panel right"></div></div><button class="scene-button" id="curtainBtn">Open the curtains</button><p class="scene-hint">A moment made for you</p></section>';
- else if(mode==='scroll')opening='<section class="invite-scene scene-scroll">'+intro('A royal announcement','Unfurl the celebration','Draw down the golden scroll to discover the royal invitation.')+'<div class="scroll-frame" id="scrollFrame"><div class="scroll-rod top"></div><div class="scroll-paper"><span>WITH THE BLESSINGS OF OUR FAMILIES</span><strong>Aarav<br>&<br>Aadhya</strong><span>REQUEST THE HONOUR OF YOUR PRESENCE</span><div class="gold-rule"></div><p>18 February 2027<br>Jaipur, Rajasthan</p></div><div class="scroll-rod bottom"></div></div><button class="scene-button" id="scrollBtn">Unfurl the royal scroll</button><p class="scene-hint">A graceful reveal, just for you</p></section>';
- else opening='<section class="invite-scene scene-gate">'+intro('An invitation to remember','A royal beginning','Touch the golden handles and step into our celebration.')+'<div class="mini-gate" id="miniGate"><div class="mini-gate-paper">Aarav<br><span style="font-size:13px">&</span><br>Aadhya</div><div class="mini-gate-door left"></div><div class="mini-gate-door right"></div></div><button class="scene-button" id="gateBtn">Open the royal doors</button><p class="scene-hint">Tap to enter</p></section>';
- const closing=sampleContent(name);
- experience.innerHTML=opening+closing;
- phoneScreen.scrollTop=0;
+ if(mode==='floral')opening=base+intro('A garden of promises','Love is in bloom','Touch the invitation and watch a little garden come to life.')+'<div class="bloom-bouquet"><div class="bloom-leaf"></div><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i><i class="bloom-flower"></i></div><button class="scene-button" id="bloomBtn">Let the flowers bloom</button><p class="unlock-note">Open the flowers to continue</p></section>';
+ else if(mode==='envelope')opening=base+intro('A note, sealed with love','A little note for you','Tap the wax seal to unfold the invitation.')+'<div class="envelope-wrap" id="envelope"><div class="envelope-back"></div><div class="envelope-letter"><span>YOU ARE CORDIALLY INVITED</span><strong>Aarav & Aadhya</strong><span>TO CELEBRATE THEIR WEDDING</span></div><div class="envelope-front"></div><div class="envelope-flap"></div><button class="envelope-seal" id="sealBtn" aria-label="Open envelope">✦</button></div><p class="unlock-note">Unseal the envelope to continue</p></section>';
+ else if(mode==='scratch')opening=base+intro('A little surprise','Unveil the joy','Reveal the keepsake to enter the celebration.')+'<div class="scratch-card" id="scratchCard"><div class="scratch-reveal"><div class="micro">Save the date</div><strong>Aarav<br>& Aadhya</strong><p>18 · 02 · 2027</p><p>Jaipur, Rajasthan</p></div><button class="scratch-cover" id="scratchBtn">✦ &nbsp; Scratch to reveal &nbsp; ✦</button></div><p class="unlock-note">Reveal the date to continue</p></section>';
+ else if(mode==='curtain')opening=base+intro('The celebration begins','A grand reveal','Draw back the curtains and enter the festivities.')+'<div class="curtain-stage" id="curtainStage"><div class="curtain-message"><div class="micro">Together with our families</div><strong>Aarav & Aadhya</strong><p>request the pleasure of your company</p></div><div class="curtain-panel left"></div><div class="curtain-panel right"></div></div><button class="scene-button" id="curtainBtn">Open the curtains</button><p class="unlock-note">Reveal the celebration to continue</p></section>';
+ else if(mode==='scroll')opening='<section class="invite-scene scene-scroll">'+intro('A royal announcement','Unfurl the celebration','Draw down the golden scroll to discover the invitation.')+'<div class="scroll-frame" id="scrollFrame"><div class="scroll-rod top"></div><div class="scroll-paper"><span>WITH THE BLESSINGS OF OUR FAMILIES</span><strong>Aarav<br>&<br>Aadhya</strong><span>REQUEST THE HONOUR OF YOUR PRESENCE</span><div class="gold-rule"></div><p>18 February 2027<br>Jaipur, Rajasthan</p></div><div class="scroll-rod bottom"></div></div><button class="scene-button" id="scrollBtn">Unfurl the royal scroll</button><p class="unlock-note">Unfurl to continue</p></section>';
+ else opening='<section class="invite-scene scene-gate">'+intro('An invitation to remember','A royal beginning','Open the doors and step into our celebration.')+'<div class="mini-gate" id="miniGate"><div class="mini-gate-paper">Aarav<br><span style="font-size:13px">&</span><br>Aadhya</div><div class="mini-gate-door left"></div><div class="mini-gate-door right"></div></div><button class="scene-button" id="gateBtn">Open the royal doors</button><p class="unlock-note">Open the doors to continue</p></section>';
+ experience.innerHTML=opening+buildStory(name);
+ phoneScreen.classList.remove('unlocked');phoneScreen.scrollTop=0;
+ const unlock=()=>{phoneScreen.classList.add('unlocked');const hint=document.querySelector('.unlock-note');if(hint)hint.textContent='Scroll to explore the celebrations'};
  const bind=(id,fn)=>{const el=document.getElementById(id);if(el)el.addEventListener('click',fn)};
- bind('bloomBtn',()=>{document.querySelector('.scene-floral').classList.add('bloomed');document.getElementById('bloomBtn').textContent='A garden in full bloom'});
- bind('sealBtn',()=>{document.getElementById('envelope').classList.add('unsealed')});
- bind('scratchBtn',()=>{document.getElementById('scratchCard').classList.add('revealed')});
- bind('curtainBtn',()=>{document.getElementById('curtainStage').classList.add('revealed');document.getElementById('curtainBtn').textContent='The celebration is revealed'});
- bind('scrollBtn',()=>{document.getElementById('scrollFrame').classList.add('unfurled');document.getElementById('scrollBtn').textContent='The royal invitation is revealed'});
- bind('gateBtn',()=>{document.getElementById('miniGate').classList.add('open');document.getElementById('gateBtn').textContent='Welcome to our celebration'});
+ bind('bloomBtn',()=>{document.querySelector('.scene-floral').classList.add('bloomed');document.getElementById('bloomBtn').textContent='A garden in full bloom';unlock()});
+ bind('sealBtn',()=>{document.getElementById('envelope').classList.add('unsealed');unlock()});
+ bind('scratchBtn',()=>{document.getElementById('scratchCard').classList.add('revealed');unlock()});
+ bind('curtainBtn',()=>{document.getElementById('curtainStage').classList.add('revealed');document.getElementById('curtainBtn').textContent='The celebration is revealed';unlock()});
+ bind('scrollBtn',()=>{document.getElementById('scrollFrame').classList.add('unfurled');document.getElementById('scrollBtn').textContent='The royal invitation is revealed';unlock()});
+ bind('gateBtn',()=>{document.getElementById('miniGate').classList.add('open');document.getElementById('gateBtn').textContent='Welcome to our celebration';unlock()});
 }
 cards.forEach(c=>c.addEventListener('click',()=>{renderInvite(c);modal.classList.add('open');document.body.style.overflow='hidden'}));
-function closeModal(){modal.classList.remove('open');document.body.style.overflow='';experience.innerHTML='';phoneScreen.scrollTop=0}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow='';experience.innerHTML='';phoneScreen.classList.remove('unlocked');phoneScreen.scrollTop=0}
 document.querySelector('.close').addEventListener('click',closeModal);
 modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});

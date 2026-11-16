@@ -101,3 +101,25 @@ input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeh
 .heirloom-envelope{transform-style:preserve-3d;overflow:visible}
 .envelope-flap{transform-origin:50% 0%;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;z-index:5}
 .envelope-seal{z-index:6}
+
+
+/* Romantic conservatory setting and layered pull-out invitation */
+.envelope-stage{background:radial-gradient(ellipse at 50% 38%,#ffffffc9 0%,#f8efe2d9 42%,#e8d7c1f2 100%);isolation:isolate}
+.envelope-stage:before{content:"";position:absolute;z-index:-1;inset:-5% 4% 12%;opacity:.62;background:repeating-linear-gradient(90deg,transparent 0 8%,#c6aa82 8.15%,transparent 8.6% 17%),repeating-linear-gradient(0deg,transparent 0 19%,#c6aa82 19.2%,transparent 19.8%),radial-gradient(ellipse at 50% 0%,#fff 0%,transparent 68%);border:12px double #d8c4a5;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:inset 0 0 50px #fff}
+.heirloom-envelope{width:min(78vw,390px);aspect-ratio:.72;filter:drop-shadow(0 24px 24px #80634233)}
+.envelope-paper{overflow:hidden;z-index:2;background:linear-gradient(145deg,#fffefa,#f5ecdf 55%,#fffaf1);border:1px solid #d6c19d;box-shadow:inset 0 0 0 7px #fff9,inset 0 0 0 8px #d6bd96,inset 0 0 30px #c9ad8055}
+.envelope-paper:before{z-index:3;top:auto;bottom:0;left:0;right:0;width:auto;height:54%;border:0;background:linear-gradient(145deg,#fffdf8,#efe0c9);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);opacity:1;box-shadow:inset 0 2px 0 #d7c19e}
+.envelope-paper:after{z-index:4;inset:auto 0 0;height:50%;background:linear-gradient(35deg,#e9d9c1 0%,#fffaf1 50%,#ead9bf 100%);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);opacity:1;pointer-events:none}
+.invitation-insert{position:absolute;z-index:2;left:10%;right:10%;top:5%;height:84%;padding:20px 12px 18px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;color:#8d6d49;background:linear-gradient(145deg,#fffaf2,#f3e5d3);border:1px solid #d7bd93;box-shadow:0 4px 16px #92734b22,inset 0 0 0 5px #fff9,inset 0 0 0 6px #d8c19b}
+.invitation-insert:before{content:"";position:absolute;inset:10px;border:1px solid #d9c4a1;pointer-events:none}
+.invitation-insert .insert-ornament{font-size:1.55rem;color:#c49c70;margin:5px 0 16px}
+.invitation-insert small{font:600 .48rem "Cormorant Garamond";letter-spacing:.13em;color:#9e815e}
+.invitation-insert strong{font:500 clamp(1.25rem,5vw,1.8rem) "Cormorant Garamond";color:#9b754b;margin:18px 0 12px}
+.invitation-insert strong i{font-style:italic;color:#c39c72}
+.invitation-insert em{font:italic .95rem "Cormorant Garamond";color:#a88768}
+.insert-rule{color:#bd9669;margin:16px 0 12px}
+.envelope-flap{z-index:5;height:48%;background:linear-gradient(145deg,#fffefa,#ecddc8);filter:drop-shadow(0 5px 5px #8c704044)}
+.envelope-seal{z-index:6}
+.envelope-caption{margin-bottom:15px}
+.envelope-hint{margin:14px 0 8px}
+@media(max-width:480px){.heirloom-envelope{width:min(76vw,350px)}.invitation-insert{padding:15px 8px}.invitation-insert .insert-ornament{margin:2px 0 10px}}

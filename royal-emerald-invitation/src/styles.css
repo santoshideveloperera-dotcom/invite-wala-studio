@@ -125,3 +125,48 @@ input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeh
 @media(max-width:480px){.heirloom-envelope{width:min(76vw,350px)}.invitation-insert{padding:15px 8px}.invitation-insert .insert-ornament{margin:2px 0 10px}}
 
 .envelope-paper{overflow:visible}
+
+
+/* Invite Wala: eight original invitation concepts */
+.design-gallery{position:fixed;z-index:20;inset:0;overflow:auto;padding:clamp(24px,5vw,58px) clamp(16px,5vw,64px) 30px;background:radial-gradient(ellipse at 50% 0%,#fffdf7,#f4e9d9 68%,#e8d7c2);color:#72583d}
+.gallery-heading{text-align:center;max-width:720px;margin:0 auto 30px}.gallery-heading>small{font:600 .58rem "Plus Jakarta Sans";letter-spacing:.25em;color:#a47c49}.gallery-heading h1{font:italic 500 clamp(2.5rem,6vw,4.6rem) "Cormorant Garamond";margin:9px 0;color:#765638}.gallery-heading p{font:italic 1.15rem "Cormorant Garamond";color:#987c5e;margin:0 auto;max-width:550px}
+.design-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1280px;margin:auto}
+.design-card{display:flex;flex-direction:column;overflow:hidden;padding:0;text-align:left;border:1px solid #cdb58f;border-radius:5px;background:#fffaf2;color:#72583d;cursor:pointer;box-shadow:0 10px 26px #76563812;min-width:0}
+.design-art{height:clamp(145px,18vw,220px);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 44%,#fffdf4,#ead8bb)}
+.design-art:before{content:"";position:absolute;inset:12px;border:1px solid #b99058;opacity:.7}
+.design-art:after{content:"";position:absolute;inset:22px;border:1px solid #fff9;opacity:.9}
+.design-art b{font:normal clamp(3.3rem,7vw,5.6rem) "Cormorant Garamond";color:#ad844b;text-shadow:1px 2px #fff8;z-index:1}
+.design-art em{position:absolute;bottom:20%;left:0;right:0;text-align:center;font:italic 1rem "Cormorant Garamond";color:#8a6a45;z-index:2}
+.design-art>small{position:absolute;bottom:9%;font:600 .42rem "Plus Jakarta Sans";letter-spacing:.25em;color:#a17c4e;z-index:2}
+.art-frame{position:absolute;width:53%;height:68%;border:3px double #c4a36e;border-radius:48% 48% 2px 2px;box-shadow:0 0 0 8px #fff5}
+.design-info{display:flex;flex-direction:column;gap:5px;padding:14px 15px 16px;min-height:126px}
+.design-info strong{font:600 1.12rem "Cormorant Garamond";color:#705237}
+.design-info small{font:600 .53rem "Plus Jakarta Sans";letter-spacing:.09em;text-transform:uppercase;color:#a17b4d}
+.design-info>span{font:.73rem/1.45 "Plus Jakarta Sans";color:#927d64}
+.design-info i{font:600 .6rem "Plus Jakarta Sans";font-style:normal;letter-spacing:.08em;color:#9b7545;margin-top:auto;padding-top:7px}
+.design-card:hover{border-color:#a77d46;box-shadow:0 16px 34px #76563824}
+.design-mint .design-art{background:radial-gradient(circle,#f9fff7,#c8dfcf)}.design-mint .design-art b{color:#65866b}.design-mint .art-frame{border-color:#719778}
+.design-rose .design-art{background:radial-gradient(circle,#fff9f7,#e7c9c1)}.design-rose .design-art b{color:#ad7774}.design-rose .art-frame{border-color:#bd8880;border-radius:8px}
+.design-ivory .design-art{background:radial-gradient(circle,#fffefa,#eadfc9)}
+.design-saffron .design-art{background:radial-gradient(circle,#fff6e5,#e8bd7f)}.design-saffron .design-art b{color:#a96b31}.design-saffron .art-frame{border-color:#bd8746;border-radius:45% 45% 4px 4px}
+.design-plum .design-art{background:radial-gradient(circle,#fff3dc,#9c7b78)}.design-plum .design-art b{color:#e9c77c}.design-plum .art-frame{border-color:#d6b16b;border-radius:50%}
+.design-peach .design-art{background:radial-gradient(circle,#fff8ec,#efc9aa)}.design-peach .design-art b{color:#b8795c}.design-peach .art-frame{border-color:#c68b6c;transform:rotate(45deg);width:48%;height:58%}
+.design-blush .design-art{background:radial-gradient(circle,#fff9f8,#e9c5ca)}.design-blush .design-art b{color:#b96e7d}.design-blush .art-frame{border-color:#c78d96;border-radius:50% 50% 4px 4px}
+.design-switch{position:fixed;z-index:9;left:15px;top:15px;border:1px solid #c6a56d;border-radius:30px;background:#fffaf0ed;color:#8b673b;padding:10px 14px;font:.58rem "Plus Jakarta Sans";letter-spacing:.06em;cursor:pointer;box-shadow:0 5px 18px #8c704022}
+.envelope-stage[data-design="miniature"]{background:radial-gradient(ellipse at 50% 40%,#f7fff6,#dcebdd 75%,#c4d9c8)}
+.envelope-stage[data-design="popup"]{background:radial-gradient(ellipse at 50% 40%,#fff9f4,#efded8 75%,#ddc5bf)}
+.envelope-stage[data-design="palki"]{background:radial-gradient(ellipse at 50% 40%,#fff7e7,#efd5ae 75%,#d8b887)}
+.envelope-stage[data-design="mandala"]{background:radial-gradient(ellipse at 50% 40%,#fff8e7,#e6d4bb 75%,#c8ad8e)}
+.envelope-stage[data-design="caricature"]{background:radial-gradient(ellipse at 50% 40%,#fff8ed,#f5dfc9 75%,#eac6a7)}
+.envelope-stage[data-design="floral"]{background:radial-gradient(ellipse at 50% 40%,#fff8f8,#f1dce0 75%,#e5c3cb)}
+.site[data-design="miniature"] .heroCard{border-color:#88a88b;background:linear-gradient(145deg,#f8fff7f2,#e5f0e4f2)}.site[data-design="miniature"] .section h2,.site[data-design="miniature"] .heroCard h1{color:#58765e}
+.site[data-design="popup"] .heroCard{border:8px solid #e6c9c0;outline:1px solid #b9897d;background:#fff8f4}.site[data-design="popup"] .section h2,.site[data-design="popup"] .heroCard h1{color:#95665f}
+.site[data-design="paper"] .heroCard{box-shadow:0 20px 70px #8b6d4422,inset 0 0 0 8px #fff,inset 0 0 0 10px #c5a36d}
+.site[data-design="palki"] .heroCard{border-color:#c18b4c;background:linear-gradient(145deg,#fff7e8f2,#f2dfc1f2)}.site[data-design="palki"] .section h2,.site[data-design="palki"] .heroCard h1{color:#98632e}
+.site[data-design="mandala"] .heroCard{border:3px double #b68b50;background:radial-gradient(circle,#fffaf0,#eee0c9)}.site[data-design="mandala"] .heroCard:before,.site[data-design="mandala"] .heroCard:after{content:"✺";font-size:2.5rem;color:#b68b50}
+.site[data-design="caricature"] .heroCard{border:2px dashed #c48d6c;border-radius:28px;background:#fff8ed}.site[data-design="caricature"] .section h2,.site[data-design="caricature"] .heroCard h1{color:#a66e52}
+.site[data-design="floral"] .heroCard{border-color:#cf9ca4;background:linear-gradient(145deg,#fff9fa,#f8e9eb)}.site[data-design="floral"] .heroCard:before,.site[data-design="floral"] .heroCard:after{content:"❀";color:#c17e8a}.site[data-design="floral"] .section h2,.site[data-design="floral"] .heroCard h1{color:#98636f}
+.site[data-design="miniature"] .glass{border-color:#a2bea0}.site[data-design="popup"] .glass{border-color:#d6b0a7}.site[data-design="palki"] .glass{border-color:#c89a60}.site[data-design="mandala"] .glass{border-color:#bda06d}.site[data-design="caricature"] .glass{border-color:#d6a78a}.site[data-design="floral"] .glass{border-color:#d6aab1}
+@media(max-width:900px){.design-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:700px}}
+@media(max-width:480px){.design-gallery{padding:28px 13px 24px}.gallery-heading{margin-bottom:20px}.design-grid{gap:10px}.design-art{height:145px}.design-info{padding:11px;min-height:142px}.design-info strong{font-size:1rem}.design-info>span{font-size:.67rem}}
+@media(prefers-reduced-motion:reduce){.design-card{transition:none}}

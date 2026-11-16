@@ -285,6 +285,32 @@
 .art.layout-floral-rose:before{content:"❀";position:absolute;left:4%;top:4%;font-size:clamp(50px,8vw,88px);color:#a85e69;text-shadow:35px 30px 0 #c58b8a,-8px 90px 0 #bd8584}
 .art.layout-floral-rose:after{content:"❀";position:absolute;right:5%;bottom:7%;font-size:clamp(50px,8vw,88px);color:#a85e69;border:0;transform:rotate(35deg)}
 
+
+/* Original Invite Wala signature invitation concepts */
+.art.layout-royal-palace-3d{background:radial-gradient(ellipse at 50% 25%,#fff4d5,#d7b77e 65%,#947044);color:#65472d}
+.art.layout-royal-palace-3d:before{content:"";position:absolute;inset:9% 17% 5%;border:5px double #b58a45;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:0 0 24px #fff2c466}
+.art.layout-royal-palace-3d .paper-card{background:#fff8e9;border:3px double #bd9654;box-shadow:0 14px 35px #65472d33}
+.art.layout-miniature-wedding{background:linear-gradient(#b8c6a1 0 38%,#e7c99a 39%);color:#74503a}
+.art.layout-miniature-wedding:before{content:"";position:absolute;bottom:8%;width:76%;height:43%;border:5px solid #bd9654;border-bottom:0;border-radius:50% 50% 0 0;box-shadow:inset 0 12px #fff4d0}
+.art.layout-miniature-wedding .paper-card{background:#fff4df;border-radius:48% 48% 3px 3px}
+.art.layout-popup-book{background:linear-gradient(120deg,#b99b83 0 49%,#e6d8c9 50%);color:#694a46}
+.art.layout-popup-book .paper-card{background:#fff8ef;transform:perspective(500px) rotateY(-7deg);box-shadow:12px 12px 0 #c8a98c,18px 18px 24px #49332b33}
+.art.layout-paper-crafted{background:radial-gradient(ellipse,#fffaf0,#d9c6a8);color:#765a3e}
+.art.layout-paper-crafted .paper-card{background:repeating-linear-gradient(45deg,#fffaf0,#fffaf0 4px,#f4ead9 5px);border:1px solid #c0a06c;box-shadow:0 10px 26px #715b4030}
+.art.layout-rajasthani-palki{background:linear-gradient(#e7c58f,#bd8151);color:#783f2e}
+.art.layout-rajasthani-palki:before{content:"🐘";position:absolute;left:8%;bottom:12%;font-size:clamp(40px,8vw,85px);filter:drop-shadow(0 5px 3px #5a321c44)}
+.art.layout-rajasthani-palki:after{content:"🐘";position:absolute;right:8%;bottom:12%;font-size:clamp(40px,8vw,85px);filter:drop-shadow(0 5px 3px #5a321c44)}
+.art.layout-rajasthani-palki .paper-card{background:#fff0d6;border:3px double #b7773e}
+.art.layout-golden-mandala{background:radial-gradient(circle,#49624c,#263a32 70%);color:#f4dfaa}
+.art.layout-golden-mandala:before{content:"۞";position:absolute;font-size:clamp(150px,27vw,290px);color:#d6b66e;opacity:.28;animation:mandalaTurn 35s linear infinite}
+.art.layout-golden-mandala .paper-card{background:#304b3d;border:2px solid #d6b66e}
+.art.layout-caricature-wedding{background:linear-gradient(145deg,#e9d8cb,#c9a6a1);color:#78515a}
+.art.layout-caricature-wedding:before{content:"♡  ♡";position:absolute;top:10%;font-size:clamp(36px,7vw,75px);color:#bd8585;letter-spacing:1em;opacity:.7}
+.art.layout-caricature-wedding .paper-card{background:#fff7ef;border-radius:42% 42% 5px 5px}
+.art.layout-floral-rose{background:radial-gradient(ellipse at 50% 50%,#f8e9e3,#d8b3b0);color:#824d56}
+.art.layout-floral-rose:before{content:"❀  ❁  ❀";position:absolute;inset:5% 0 auto;text-align:center;font-size:clamp(28px,6vw,65px);color:#b77980;opacity:.65;letter-spacing:.18em}
+.art.layout-floral-rose .paper-card{background:#fff4ef;border:1px solid #bf8c8c;box-shadow:0 12px 30px #824d5625}
+@keyframes mandalaTurn{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -326,7 +352,7 @@ const total=familiesReady.length,batchSize=12;
 let filter="All",styleFilter="All",cursor=0,shown=0;
 const grid=document.getElementById("templateGrid"),more=document.getElementById("loadMore"),count=document.getElementById("resultCount");
 function dataFor(n){const f=familiesReady[n];return {...f,id:n,events:({Wedding:["Mehendi & Family Blessings","The Wedding Ceremony","Dinner & Celebration"],"Save the Date":["The Date Reveal","The Wedding Day","Celebrations to follow"],Engagement:["Ring Ceremony","Family Blessings","Dinner & Celebration"],"Haldi & Mehendi":["Haldi Ceremony","Mehendi Evening","Music & Masti"],Sangeet:["Sangeet Night","Dance & Music","Dinner & Celebration"],Bachelorette:["Welcome Toast","Party Time","After Hours"],"Bridal Shower":["Welcome & Games","The Bridal Toast","Cake & Celebration"],"Baby Shower":["Welcome Baby","Blessings & Games","Sweet Treats"]})[f.cat]||["Welcome","Main Celebration","Together Afterwards"]};}
-function styleOf(f){const l=f.layout||"";if(l==="luxury-interactive")return "3D";if(l==="cinematic-love")return "Cinematic";if(l==="illustrated-dreams")return "Illustrated";if(["floral","botanical","garden","rose","bloom","baby-bloom","lavender","teaparty","wildflower","royal-bloom"].includes(l))return "Floral";if(["palace","mehfil","stars","midnight","courtyard","sangeet","disco","palace-grand"].includes(l))return "Royal";if(["editorial","monogram","journal","calendar","ink","pearl","blue"].includes(l))return "Minimal";return "Festive";}
+function styleOf(f){const l=f.layout||"";if(l==="luxury-interactive")return "3D";if(l==="cinematic-love")return "Cinematic";if(l==="illustrated-dreams")return "Illustrated";if(["floral","botanical","garden","rose","bloom","baby-bloom","lavender","teaparty","wildflower","royal-bloom"].includes(l))return "Floral";if(["palace","mehfil","stars","midnight","courtyard","sangeet","disco","palace-grand","royal-palace-3d","miniature-wedding","rajasthani-palki","golden-mandala"].includes(l))return "Royal";if(["editorial","monogram","journal","calendar","ink","pearl","blue"].includes(l))return "Minimal";return "Festive";}
 function matches(n){const f=familiesReady[n],occasion=filter==="All"||f.cat===filter,style=styleFilter==="All"||(styleFilter==="Animated"?!!f.animated:styleOf(f)===styleFilter);return occasion&&style;}
 function countForFilter(){let c=0;for(let n=0;n<total;n++)if(matches(n))c++;return c;}
 function card(d){return '<article class="template-card" tabindex="0" role="button" data-id="'+d.id+'" aria-label="Tap to preview '+d.name+'"><div class="art layout-'+d.layout+'" style="background:'+d.bg+';color:'+d.ink+'">'+(d.animated?'<span class="animated-tag">✦ ANIMATED</span>':'')+'<div class="motif circle">'+d.orn+'</div><div class="paper-card" style="background:'+d.paper+';color:'+d.ink+'"><div class="paper-inner" style="border-color:'+d.accent+'"><div class="micro">'+d.kicker+'</div><div class="names" style="font-family:'+d.font+'">'+d.orn+'<br>'+d.name+'</div><div class="detail">'+d.cat+' · INVITATION</div></div></div><div class="play-pill"><span class="play-icon">▶</span> Tap to preview</div></div><div class="card-info"><div><h3>'+d.name+'</h3><p>'+d.cat+' · '+d.desc+'</p></div><span class="card-arrow">↗</span></div></article>';}

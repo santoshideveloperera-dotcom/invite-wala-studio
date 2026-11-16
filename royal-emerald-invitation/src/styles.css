@@ -123,3 +123,5 @@ input,select{background:#fffaf3;border-color:#cbb58f;color:#5b4635}input::placeh
 .envelope-caption{margin-bottom:15px}
 .envelope-hint{margin:14px 0 8px}
 @media(max-width:480px){.heirloom-envelope{width:min(76vw,350px)}.invitation-insert{padding:15px 8px}.invitation-insert .insert-ornament{margin:2px 0 10px}}
+
+.envelope-paper{overflow:visible}
